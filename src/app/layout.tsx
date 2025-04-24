@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { Onest, Anonymous_Pro } from "next/font/google";
 import "./globals.scss";
-
+import "@mantine/core/styles.css";
+import {
+    ColorSchemeScript,
+    mantineHtmlProps,
+    MantineProvider,
+    createTheme,
+} from "@mantine/core";
 const onest = Onest({
     variable: "--font-onest",
     subsets: ["latin"],
@@ -18,15 +24,22 @@ export const metadata: Metadata = {
     description: "lttle.cloud",
 };
 
+const theme = createTheme({
+    fontFamily: "var(--font-onest)",
+});
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" {...mantineHtmlProps}>
+            <head>
+                <ColorSchemeScript />
+            </head>
             <body className={`${onest.variable} ${anonymousPro.variable}`}>
-                {children}
+                <MantineProvider theme={theme}>{children}</MantineProvider>
             </body>
         </html>
     );

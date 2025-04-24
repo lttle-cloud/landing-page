@@ -1,0 +1,17 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    background-color: $black-1;
+    color: $true-white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0px 5px 0px 0px $black-3;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+
+    span {
+        font-weight: 800;
+        font-size: 0.875rem;
+    }
+}

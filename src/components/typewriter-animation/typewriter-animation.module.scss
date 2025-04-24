@@ -1,0 +1,22 @@
+@use "@/app/variables.scss" as *;
+
+.container {
+    &::after {
+        content: "|";
+        position: absolute;
+        right: -10px;
+        animation: blink 1s infinite;
+    }
+}
+
+@keyframes blink {
+    0%,
+    49%,
+    100% {
+        opacity: 1;
+    }
+    50%,
+    99% {
+        opacity: 0;
+    }
+}

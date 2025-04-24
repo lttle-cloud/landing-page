@@ -1,43 +1,22 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import classes from "./section-hero.module.scss";
-import { useEffect, useState } from "react";
+import Lottie from "@lottielab/lottie-player/react";
+import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
+import WordScrollAnimation from "../scroll-animation/word-scroll-animation";
 
 const words = ["bloated", "slow", "expensive", "complex"];
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 100;
-const PAUSE_TIME = 2000;
+const TYPING_PAUSE_TIME = 2000;
+
+const SCROLL_DURATION = 2000;
+const SCROLL_PAUSE_TIME = 1000;
+
+const words2 = ["web app", "api", "cli", "docker image"];
 
 const SectionHero = () => {
-    const [text, setText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [wordIndex, setWordIndex] = useState(0);
-    const [delta, setDelta] = useState(TYPING_SPEED);
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            const currentWord = words[wordIndex];
-
-            if (isDeleting) {
-                setText(currentWord.substring(0, text.length - 1));
-                setDelta(DELETING_SPEED);
-            } else {
-                setText(currentWord.substring(0, text.length + 1));
-                setDelta(TYPING_SPEED);
-            }
-
-            if (!isDeleting && text === currentWord) {
-                setTimeout(() => setIsDeleting(true), PAUSE_TIME);
-            } else if (isDeleting && text === "") {
-                setIsDeleting(false);
-                setWordIndex((prev) => (prev + 1) % words.length);
-            }
-        }, delta);
-
-        return () => clearTimeout(timeout);
-    }, [text, isDeleting, wordIndex, delta]);
-
     return (
         <section className={classes.root}>
             <div className={classes.content}>
@@ -45,7 +24,15 @@ const SectionHero = () => {
                     <div className={classes.block1}>
                         <h1>
                             the cloud is{" "}
-                            <span className={classes.emphasis}>{text}</span> ,
+                            <span className={classes.emphasis}>
+                                <TypewriterAnimation
+                                    words={words}
+                                    typingSpeed={TYPING_SPEED}
+                                    deletingSpeed={DELETING_SPEED}
+                                    pauseTime={TYPING_PAUSE_TIME}
+                                />
+                            </span>{" "}
+                            ,
                             <br />
                             so we tore it down and
                             <br />
@@ -61,7 +48,7 @@ const SectionHero = () => {
                     </div>
 
                     <div className={classes.block2}>
-                        <div className={classes.features}>
+                        {/* <div className={classes.features}>
                             <h2>run any app as serverless</h2>
                             <ul>
                                 <li>
@@ -98,6 +85,27 @@ const SectionHero = () => {
                                     </p>
                                 </li>
                             </ul>
+                        </div> */}
+
+                        <div className={classes.block2Text}>
+                            <h2>
+                                deploy your{" "}
+                                <span className={classes.emphasis}>
+                                    <WordScrollAnimation
+                                        words={words2}
+                                        scrollDuration={SCROLL_DURATION}
+                                        pauseTime={SCROLL_PAUSE_TIME}
+                                    />
+                                </span>{" "}
+                                as serverless in seconds
+                            </h2>
+
+                            <div className={classes.codeInstructions}>
+                                <h2>just run:</h2>
+                                <div className={classes.codeBlock}>
+                                    <p>lttle deploy</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className={classes.actions}>
@@ -108,11 +116,16 @@ const SectionHero = () => {
                     </div>
                 </div>
                 <div className={classes.image}>
-                    <Image
+                    {/* <Image
                         src="/assets/hero-image.svg"
                         alt="hero"
                         width={1000}
                         height={1000}
+                    /> */}
+                    <Lottie
+                        // src="https://cdn.lottielab.com/l/5NgnQtvt2yyWa1.json"
+                        src="/assets/lottie/hero-anim.json"
+                        autoplay
                     />
                 </div>
             </div>

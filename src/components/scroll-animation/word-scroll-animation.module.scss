@@ -1,0 +1,37 @@
+@use "@/app/variables.scss" as *;
+
+.container {
+    position: relative;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: end;
+    background-color: $light-gray-2;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.word {
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    white-space: nowrap;
+
+    &.activeWord {
+        transform: translateY(0);
+    }
+
+    &.nextWord {
+        transform: translateY(1em);
+        opacity: 0;
+    }
+
+    &.prevWord {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
+
+    &.hidden {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+}
