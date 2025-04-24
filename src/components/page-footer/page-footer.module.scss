@@ -1,0 +1,60 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    background-color: $pink-2;
+    color: $true-white;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $width-content;
+    width: 100%;
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .copyright {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            a {
+                font-size: 0.75rem;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.graphicContainer {
+    position: relative;
+    width: 100%;
+
+    img {
+        position: absolute;
+    }
+}

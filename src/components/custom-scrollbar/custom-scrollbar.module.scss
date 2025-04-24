@@ -1,0 +1,61 @@
+@use "@/app/variables.scss" as *;
+
+.scrollbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rem;
+    min-height: 1rem;
+    z-index: 10;
+
+    .scrollbarTrack {
+        position: relative;
+        width: 100%;
+        border-radius: 1rem;
+        min-height: 1rem;
+    }
+
+    .scrollbarThumb {
+        position: absolute;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 1rem;
+        cursor: grab;
+        transition: background-color 0.2s;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &.red {
+        .scrollbarTrack {
+            background-color: $red-1;
+        }
+
+        .scrollbarThumb {
+            background-color: $red-2;
+        }
+    }
+
+    &.teal {
+        .scrollbarTrack {
+            background-color: $teal-1;
+        }
+
+        .scrollbarThumb {
+            background-color: $teal-2;
+        }
+    }
+
+    &.cream {
+        .scrollbarTrack {
+            background-color: $cream-2;
+        }
+
+        .scrollbarThumb {
+            background-color: $cream-3;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.root {
+    border-radius: 1rem;
+    max-width: 900px;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .tab {
+        cursor: pointer;
+        position: relative;
+        padding: 1rem 2rem;
+        border-radius: 1rem 1rem 0 0;
+        border: 5px solid $black-1;
+        border-bottom: none;
+
+        background-color: $true-white;
+        color: $gray-3;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1;
+
+        height: fit-content;
+        z-index: 1;
+
+        &.active {
+            color: $black-2;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        &:not(:first-child) {
+            margin-left: -5px;
+        }
+
+        &:last-child {
+            box-shadow: 5px 5px 0 0 $black-1;
+        }
+    }
+
+    .tabsPadding {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+
+        .tabPadding {
+            background-color: $true-white;
+            height: 2rem;
+            border-top: 5px solid $black-1;
+            z-index: 2;
+
+            &:first-child {
+                border-left: 5px solid $black-1;
+            }
+
+            &:last-child {
+                border-right: 5px solid $black-1;
+                border-radius: 0 1rem 0 0;
+
+                box-shadow: 5px 5px 0 0 $black-1;
+            }
+
+            &.active {
+                border-top: none;
+            }
+
+            &.buffer {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        border: 5px solid $black-1;
+        border-top: none;
+        border-radius: 0 0 1rem 1rem;
+        background-color: $true-white;
+        box-shadow: 5px 0 0 0 $black-1, 0 5px 0 0 $black-1, 5px 5px 0 0 $black-1;
+
+        padding: 2rem;
+        padding-top: 0;
+        z-index: 3;
+    }
+}

@@ -1,0 +1,16 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    font-weight: 900;
+    .lttle {
+        color: $pink-2;
+    }
+
+    .dot {
+        color: $gray-2;
+    }
+
+    .cloud {
+        color: $blue-2;
+    }
+}

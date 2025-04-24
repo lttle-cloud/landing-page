@@ -1,0 +1,13 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    display: flex;
+    padding: 1rem 2rem;
+    max-width: $width-content;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+}

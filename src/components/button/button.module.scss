@@ -1,0 +1,52 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    height: fit-content;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &.primary {
+        background-color: $pink-2;
+        color: $true-white;
+
+        box-shadow: $shadow-pink;
+
+        &:hover {
+            box-shadow: $shadow-pink-hover;
+            transform: translate(3px, 3px);
+        }
+
+        &:active {
+            box-shadow: $shadow-pink-active;
+            transform: translate(5px, 5px);
+            background-color: $red-2;
+        }
+    }
+
+    &.secondary {
+        @extend .primary;
+
+        box-shadow: $shadow-black;
+
+        &:hover {
+            box-shadow: $shadow-black-hover;
+        }
+
+        &:active {
+            box-shadow: $shadow-black-active;
+        }
+    }
+
+    &:focus-visible {
+        outline: 3px solid $black-3;
+        outline-offset: 4px;
+    }
+}

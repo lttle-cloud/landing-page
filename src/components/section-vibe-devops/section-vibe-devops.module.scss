@@ -1,0 +1,94 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    @include section;
+    max-height: unset;
+    width: 100%;
+    padding: 4rem;
+    background-color: $teal-1;
+    gap: 2rem;
+
+    .titleContainer {
+        @include section-title-container;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: $true-white;
+            font-weight: 500;
+
+            span {
+                font-weight: 900;
+            }
+        }
+
+        p {
+            color: $black-1;
+        }
+    }
+
+    .cardsContainer {
+        display: flex;
+        gap: 2rem;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            gap: 2rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: $shadow-black;
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            .cardDescription {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+            }
+
+            &.red {
+                background-color: $red-2;
+                color: $true-white;
+            }
+
+            &.cream {
+                background-color: $cream-1;
+            }
+
+            &.gray {
+                background-color: $light-gray-3;
+            }
+
+            &.blue {
+                background-color: $blue-1;
+                color: $true-white;
+            }
+
+            &.special {
+                h3 {
+                    font-size: 3rem;
+                }
+
+                background-color: $true-white;
+                color: $black-3;
+                border: 5px solid $black-3;
+            }
+        }
+    }
+}

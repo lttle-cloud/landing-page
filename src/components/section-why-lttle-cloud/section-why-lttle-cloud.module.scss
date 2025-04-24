@@ -1,0 +1,186 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
+    width: 100%;
+    padding: 4rem 0;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        width: 100%;
+        max-width: $width-content;
+        padding: 0 2rem;
+
+        .titleContainer {
+            @include section-title-container;
+            width: 100%;
+            // padding: 0 4rem;
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+
+    .sectionTitle {
+        width: 100%;
+        max-width: $width-content;
+        padding: 0 2rem;
+
+        h3 {
+            color: $blue-2;
+            font-weight: 400;
+            font-size: 2.5rem;
+
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.cardSectionWrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .scrollbarContainer {
+        position: relative;
+        width: calc(100% - 6rem);
+    }
+}
+
+.cardsContainer {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 0 3rem;
+    padding-bottom: 1rem;
+
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+        display: none; // Chrome/Safari/Opera
+    }
+
+    user-select: none; /* Prevents text selection while dragging */
+    cursor: grab;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: $shadow-blue;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-width: 535px;
+    width: 535px;
+
+    .cardHeader {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 0.75rem;
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .cardContent {
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+    }
+
+    &.problem {
+        .cardHeader {
+            background-color: $red-3;
+            color: $true-white;
+        }
+
+        .cardContent {
+            background-color: $red-2;
+            color: $true-white;
+        }
+    }
+
+    &.solution {
+        .cardHeader {
+            background-color: $teal-3;
+            color: $true-white;
+        }
+
+        .cardContent {
+            background-color: $teal-2;
+            color: $true-white;
+        }
+    }
+
+    &.advantage {
+        .cardHeader {
+            background-color: $cream-3;
+            color: $black-3;
+        }
+
+        .cardContent {
+            background-color: $cream-2;
+            color: $black-3;
+        }
+    }
+}
+
+.specialCard {
+    @extend .card;
+
+    width: calc(100% - 6rem);
+    min-width: 0;
+    max-width: min(100% - 6rem, 900px);
+
+    .cardHeader {
+        background-color: $pink-2;
+        color: $true-white;
+    }
+
+    .cardContent {
+        background-color: $pink-1;
+        color: $black-3;
+        position: relative;
+
+        p {
+            z-index: 1;
+            position: relative;
+        }
+
+        .illustration {
+            position: absolute;
+            bottom: -2rem;
+            right: 4rem;
+            transform: rotate(-30deg);
+        }
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .cardsContainer {
+        .card {
+            width: 700px;
+            min-width: 700px;
+        }
+    }
+}

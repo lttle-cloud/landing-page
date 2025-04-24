@@ -1,0 +1,15 @@
+@use "@/app/variables.scss" as *;
+
+.root {
+    &.teal {
+        background-color: $teal-2;
+    }
+
+    &.pink {
+        background-color: $pink-2;
+    }
+
+    &.red {
+        background-color: $red-2;
+    }
+}
