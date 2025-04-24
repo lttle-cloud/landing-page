@@ -62,11 +62,13 @@
 
                 h3 {
                     font-size: 1.5rem;
+                    text-align: center;
                 }
 
                 h4 {
                     font-size: 1.5rem;
                     font-weight: 900;
+                    text-align: center;
                 }
 
                 p {
@@ -80,6 +82,10 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
+
+                .button {
+                    font-weight: 800;
                 }
             }
         }
@@ -131,6 +137,42 @@
 
                     .codeBlock {
                         @include code-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .root {
+        padding: 2rem 1rem;
+
+        .content {
+            .cardsContainer {
+                flex-direction: column;
+            }
+
+            .tabContentTerminal {
+                padding: 1rem;
+
+                ul {
+                    gap: 1rem;
+                    li {
+                        gap: 0.5rem;
+                        .itemTitle {
+                            span {
+                                font-size: 1rem;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

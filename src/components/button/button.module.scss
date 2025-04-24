@@ -50,3 +50,9 @@
         outline-offset: 4px;
     }
 }
+
+@media (max-width: $breakpoint-tablet) {
+    .root {
+        font-size: 1rem;
+    }
+}

@@ -46,6 +46,16 @@
     }
 }
 
+.cardsContainerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 100%;
+}
+
 .cardSectionWrapper {
     width: 100%;
 
@@ -56,6 +66,7 @@
 
     .scrollbarContainer {
         position: relative;
+        height: 1rem;
         width: calc(100% - 6rem);
     }
 }
@@ -165,6 +176,7 @@
         p {
             z-index: 1;
             position: relative;
+            font-size: 1rem;
         }
 
         .illustration {
@@ -181,6 +193,68 @@
         .card {
             width: 700px;
             min-width: 700px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .root {
+        .sectionTitle {
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .cardsContainer {
+        padding: 0 1.5rem 1rem;
+        gap: 1rem;
+
+        .card {
+            .cardHeader {
+                padding: 1rem;
+
+                h4 {
+                    font-size: 1rem;
+                }
+            }
+
+            .cardContent {
+                padding: 1rem;
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+
+    .cardsContainerWrapper {
+        gap: 0.5rem;
+    }
+
+    .cardSectionWrapper {
+        .scrollbarContainer {
+            width: calc(100% - 3rem);
+        }
+    }
+
+    .specialCard {
+        width: calc(100% - 3rem);
+        max-width: calc(100% - 3rem);
+
+        .cardHeader {
+            padding: 1rem;
+
+            h4 {
+                font-size: 1rem;
+            }
+        }
+
+        .cardContent {
+            padding: 1rem;
+            p {
+                font-size: 0.75rem;
+            }
         }
     }
 }

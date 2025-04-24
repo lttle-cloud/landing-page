@@ -39,7 +39,9 @@ const SectionGetStarted = () => {
                             to make this look a bit fuller because one line of
                             text doesn’t look like enough
                         </p>
-                        <Button variant="secondary">sign up here</Button>
+                        <Button variant="secondary" className={classes.button}>
+                            sign up here
+                        </Button>
                     </div>
                     <div className={classes.card}>
                         <div className={classes.cardHeader}>
@@ -50,7 +52,9 @@ const SectionGetStarted = () => {
                             prefer to run your own stack? <br /> check out our
                             github for setup and source.
                         </p>
-                        <Button variant="secondary">github</Button>
+                        <Button variant="secondary" className={classes.button}>
+                            github
+                        </Button>
                     </div>
                 </div>
 

@@ -53,6 +53,8 @@
 
             p {
                 font-size: 1.25rem;
+                font-weight: 500;
+                margin-right: auto;
             }
 
             .cardDescription {
@@ -88,6 +90,39 @@
                 background-color: $true-white;
                 color: $black-3;
                 border: 5px solid $black-3;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .root {
+        padding: 4rem 1rem;
+
+        .cardsContainer {
+            flex-direction: column;
+
+            .card {
+                padding: 1rem;
+                gap: 1.5rem;
+
+                h3 {
+                    font-size: 1rem;
+                }
+
+                .cardDescription {
+                    gap: 2rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                &.special {
+                    h3 {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }

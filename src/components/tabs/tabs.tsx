@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { cls } from "@/lib/utils";
 import classes from "./tabs.module.scss";
+import { useBreakpoint } from "@/lib/hooks";
 
 interface TabsProps {
     tabs: string[];
@@ -12,6 +13,8 @@ interface TabsProps {
 }
 
 const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
+    const breakpoint = useBreakpoint();
+
     const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
     const paddingRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -41,7 +44,7 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
                 paddingRefs.current[index]!.style.width = `${width}px`;
             }
         });
-    }, [activeTab]); // Update when tabs change
+    }, [activeTab, breakpoint]); // Update when tabs change
 
     return (
         <div className={classes.root}>

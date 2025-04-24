@@ -66,6 +66,7 @@ const SectionHero = () => {
                             <ul>
                                 <li>
                                     <Image
+                                        className={classes.bullet}
                                         src="/assets/feature-bullet.svg"
                                         alt="check"
                                         width={25}
@@ -75,6 +76,7 @@ const SectionHero = () => {
                                 </li>
                                 <li>
                                     <Image
+                                        className={classes.bullet}
                                         src="/assets/feature-bullet.svg"
                                         alt="check"
                                         width={25}
@@ -84,6 +86,7 @@ const SectionHero = () => {
                                 </li>
                                 <li>
                                     <Image
+                                        className={classes.bullet}
                                         src="/assets/feature-bullet.svg"
                                         alt="check"
                                         width={25}

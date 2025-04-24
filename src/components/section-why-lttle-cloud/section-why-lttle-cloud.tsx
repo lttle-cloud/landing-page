@@ -353,42 +353,44 @@ const SectionWhyLttleCloud = () => {
                         with the <span>usual suspects</span>
                     </h3>
                 </div>
-                <div
-                    ref={containerRefProblem}
-                    className={cls(classes.cardsContainer, classes.problem)}
-                    onMouseDown={handleMouseDown}
-                    style={{ cursor: isDragging ? "grabbing" : "grab" }}
-                >
-                    {problemCards.map((card) => (
-                        <div
-                            className={cls(classes.card, classes.problem)}
-                            key={card.title}
-                        >
-                            <div className={classes.cardHeader}>
-                                <Image
-                                    src={card.image}
-                                    alt={card.title}
-                                    width={48}
-                                    height={48}
-                                />
-                                <h4>{card.title}</h4>
+                <div className={classes.cardsContainerWrapper}>
+                    <div
+                        ref={containerRefProblem}
+                        className={cls(classes.cardsContainer, classes.problem)}
+                        onMouseDown={handleMouseDown}
+                        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                    >
+                        {problemCards.map((card) => (
+                            <div
+                                className={cls(classes.card, classes.problem)}
+                                key={card.title}
+                            >
+                                <div className={classes.cardHeader}>
+                                    <Image
+                                        src={card.image}
+                                        alt={card.title}
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <h4>{card.title}</h4>
+                                </div>
+                                <div className={classes.cardContent}>
+                                    {card.description}
+                                </div>
                             </div>
-                            <div className={classes.cardContent}>
-                                {card.description}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                {problemOverflows && (
-                    <div className={classes.scrollbarContainer}>
-                        <CustomScrollbar
-                            containerRef={
-                                containerRefProblem as React.RefObject<HTMLElement>
-                            }
-                            color="red"
-                        />
+                        ))}
                     </div>
-                )}
+                    {problemOverflows && (
+                        <div className={classes.scrollbarContainer}>
+                            <CustomScrollbar
+                                containerRef={
+                                    containerRefProblem as React.RefObject<HTMLElement>
+                                }
+                                color="red"
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className={classes.cardSectionWrapper}>
@@ -397,43 +399,48 @@ const SectionWhyLttleCloud = () => {
                         with <LttleCloudSpan />
                     </h3>
                 </div>
-                <div
-                    ref={containerRefSolution}
-                    className={cls(classes.cardsContainer, classes.solution)}
-                    onMouseDown={handleMouseDown}
-                    style={{ cursor: isDragging ? "grabbing" : "grab" }}
-                >
-                    {solutionCards.map((card) => (
-                        <div
-                            className={cls(classes.card, classes.solution)}
-                            key={card.title}
-                        >
-                            <div className={classes.cardHeader}>
-                                <Image
-                                    src={card.image}
-                                    alt={card.title}
-                                    width={48}
-                                    height={48}
-                                />
-                                <h4>{card.title}</h4>
+                <div className={classes.cardsContainerWrapper}>
+                    <div
+                        ref={containerRefSolution}
+                        className={cls(
+                            classes.cardsContainer,
+                            classes.solution
+                        )}
+                        onMouseDown={handleMouseDown}
+                        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                    >
+                        {solutionCards.map((card) => (
+                            <div
+                                className={cls(classes.card, classes.solution)}
+                                key={card.title}
+                            >
+                                <div className={classes.cardHeader}>
+                                    <Image
+                                        src={card.image}
+                                        alt={card.title}
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <h4>{card.title}</h4>
+                                </div>
+                                <div className={classes.cardContent}>
+                                    {card.description}
+                                </div>
                             </div>
-                            <div className={classes.cardContent}>
-                                {card.description}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                {solutionOverflows && (
-                    <div className={classes.scrollbarContainer}>
-                        <CustomScrollbar
-                            containerRef={
-                                containerRefSolution as React.RefObject<HTMLElement>
-                            }
-                            color="teal"
-                            initialScroll={1}
-                        />
+                        ))}
                     </div>
-                )}
+                    {solutionOverflows && (
+                        <div className={classes.scrollbarContainer}>
+                            <CustomScrollbar
+                                containerRef={
+                                    containerRefSolution as React.RefObject<HTMLElement>
+                                }
+                                color="teal"
+                                initialScroll={1}
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className={classes.cardSectionWrapper}>
@@ -442,42 +449,47 @@ const SectionWhyLttleCloud = () => {
                         <span>our edge</span>
                     </h3>
                 </div>
-                <div
-                    ref={containerRefAdvantage}
-                    className={cls(classes.cardsContainer, classes.advantage)}
-                    onMouseDown={handleMouseDown}
-                    style={{ cursor: isDragging ? "grabbing" : "grab" }}
-                >
-                    {advantageCards.map((card) => (
-                        <div
-                            className={cls(classes.card, classes.advantage)}
-                            key={card.title}
-                        >
-                            <div className={classes.cardHeader}>
-                                <Image
-                                    src={card.image}
-                                    alt={card.title}
-                                    width={48}
-                                    height={48}
-                                />
-                                <h4>{card.title}</h4>
+                <div className={classes.cardsContainerWrapper}>
+                    <div
+                        ref={containerRefAdvantage}
+                        className={cls(
+                            classes.cardsContainer,
+                            classes.advantage
+                        )}
+                        onMouseDown={handleMouseDown}
+                        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                    >
+                        {advantageCards.map((card) => (
+                            <div
+                                className={cls(classes.card, classes.advantage)}
+                                key={card.title}
+                            >
+                                <div className={classes.cardHeader}>
+                                    <Image
+                                        src={card.image}
+                                        alt={card.title}
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <h4>{card.title}</h4>
+                                </div>
+                                <div className={classes.cardContent}>
+                                    {card.description}
+                                </div>
                             </div>
-                            <div className={classes.cardContent}>
-                                {card.description}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                {advantageOverflows && (
-                    <div className={classes.scrollbarContainer}>
-                        <CustomScrollbar
-                            containerRef={
-                                containerRefAdvantage as React.RefObject<HTMLElement>
-                            }
-                            color="cream"
-                        />
+                        ))}
                     </div>
-                )}
+                    {advantageOverflows && (
+                        <div className={classes.scrollbarContainer}>
+                            <CustomScrollbar
+                                containerRef={
+                                    containerRefAdvantage as React.RefObject<HTMLElement>
+                                }
+                                color="cream"
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
             <div className={classes.specialCard}>
                 <div className={classes.cardHeader}>

@@ -101,6 +101,11 @@ $shadow-blue: 5px 5px 0px 0px $blue-3;
         font-family: var(--font-anonymous-pro);
         color: $green-1;
     }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
 }
 
 @mixin section {
@@ -119,11 +124,22 @@ $shadow-blue: 5px 5px 0px 0px $blue-3;
     h2 {
         font-size: 3rem;
         font-weight: 700;
+        text-align: center;
     }
 
     p {
         font-size: 1rem;
         font-weight: 600;
         text-align: center;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
     }
 }
