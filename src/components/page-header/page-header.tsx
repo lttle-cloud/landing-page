@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useBreakpoint } from "@/lib/hooks";
 import Button from "../button/button";
 import { Menu, Text } from "@mantine/core";
+import { useState } from "react";
 
 const sizesWithShortLogo = ["mobile", "tablet"];
 
@@ -53,6 +54,7 @@ const navItems = [
 
 const PageHeader = () => {
     const breakpoint = useBreakpoint();
+    const [opened, setOpened] = useState(false);
 
     return (
         <header className={classes.root}>
@@ -87,9 +89,18 @@ const PageHeader = () => {
                     </Button>
                 </>
             ) : (
-                <Menu position="bottom-end" width={200}>
+                <Menu
+                    position="bottom-end"
+                    width={200}
+                    opened={opened}
+                    onChange={setOpened}
+                >
                     <Menu.Target>
-                        <button className={classes.menuButton}>
+                        <button
+                            className={`${classes.menuButton} ${
+                                opened ? classes.menuButtonOpen : ""
+                            }`}
+                        >
                             <Image
                                 src={"/assets/icons/menu.svg"}
                                 alt="menu"
@@ -101,8 +112,12 @@ const PageHeader = () => {
 
                     <Menu.Dropdown>
                         {navItems.map((item) => (
-                            <Menu.Item key={item.label}>
-                                <a href={item.href}>{item.label}</a>
+                            <Menu.Item
+                                key={item.label}
+                                component="a"
+                                href={item.href}
+                            >
+                                {item.label}
                             </Menu.Item>
                         ))}
                     </Menu.Dropdown>

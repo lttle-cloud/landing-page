@@ -26,6 +26,30 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    width: 2.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.2s ease-in-out;
+
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &.menuButtonOpen {
+        background-color: $light-gray-3;
+    }
+}
+
+.ctaButton {
+    white-space: nowrap;
 }
 
 @media (max-width: $breakpoint-tablet) {

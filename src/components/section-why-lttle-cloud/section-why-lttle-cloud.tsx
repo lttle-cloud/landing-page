@@ -28,11 +28,12 @@ const problemCards: Card[] = [
                 stitching together layers of services that were never designed
                 to play nice.
                 <br />
-                <br /> the result?
+                <br />
+                the result?
                 <br />
                 <br />
-                bloated infrastructure, wasted time, and a deployment experience
-                that feels like duct-taping your app to a black box.
+                <b>bloated infrastructure</b>, wasted time, and a deployment
+                experience that feels like duct-taping your app to a black box.
             </p>
         ),
         image: "/assets/icons/x.svg",
@@ -42,12 +43,15 @@ const problemCards: Card[] = [
         description: (
             <p>
                 despite all the promises, the reality of cloud computing is
-                still far from seamless. 
+                still far from seamless.
                 <br />
                 <br />
-                you&apos;re locked into a costly, walled-garden ecosystem where
-                every service, API, and configuration is designed to keep you
-                dependent and paying more over time. 
+                you&apos;re locked into{" "}
+                <b>
+                    a costly, walled-garden ecosystem where every service, API,
+                    and configuration is designed to keep you dependent and
+                    paying more over time.
+                </b>
                 <br />
                 <br />
                 each decision, whether to scale VMs, adopt functions, or manage
@@ -62,17 +66,17 @@ const problemCards: Card[] = [
         description: (
             <p>
                 providers have built tightly integrated stacks that make it easy
-                to get started but nearly impossible to leave, trapping your app
-                in proprietary tooling and infrastructure choices that benefit
-                them, not you. 
+                to get started but <b>nearly impossible to leave</b>, trapping
+                your app in proprietary tooling and infrastructure choices that
+                benefit them, not you.
                 <br />
                 <br />
                 as your architecture grows, so do the costs, complexity, and
-                constraints. 
+                constraints.
                 <br />
                 <br />
                 it&apos;s a model built to extract maximum revenue, not deliver
-                maximum efficiency. 
+                maximum efficiency.
                 <br />
                 <br />
                 the dream of a fast, flexible, developer-friendly cloud has yet
@@ -91,19 +95,24 @@ const solutionCards: Card[] = [
                 workloads on lttle.cloud start in under 10 milliseconds, every
                 time. <br />
                 <br />
-                no cold starts. no warm-up hacks. <br />
+                <b>no cold starts. no warm-up hacks.</b>
+                <br />
                 <br />
                 just instant execution, no matter when the request comes in.{" "}
                 <br />
                 <br />
-                whether it's your first request or your thousandth, your app is
-                always ready to respond with near-zero latency.
+                whether it&apos;s your first request or your thousandth, your
+                app is always ready to respond with near-zero latency.
                 <br />
                 <br />
-                whether you're powering a real-time API, an LLM agent, or a
+                whether you&apos;re powering a real-time API, an LLM agent, or a
                 high-traffic backend, you get consistent, blazing-fast
-                performance without the traditional trade-offs. it just works.
-                fast, reliable, and exactly when you need it.
+                performance without the traditional trade-offs.
+                <br />
+                <br />
+                <b>
+                    it just works. fast, reliable, and exactly when you need it.
+                </b>
             </p>
         ),
         image: "/assets/icons/rocket.svg",
@@ -115,10 +124,10 @@ const solutionCards: Card[] = [
                 the platform, CLI, runtime, everything is open-source.
                 <br />
                 <br />
-                no hidden services. no black boxes.
+                <b>no hidden services. no black boxes.</b>
                 <br />
                 <br />
-                you'll always be able to self-host lttle.cloud.
+                you&apos;ll always be able to self-host lttle.cloud.
                 <br />
                 <br />
                 run it on your own hardware, fork it, extend it, your cloud,
@@ -141,22 +150,25 @@ const solutionCards: Card[] = [
         title: "fair & efficient cost model",
         description: (
             <p>
-                unlike traditional cloud providers, lttle.cloud charges you only
-                when your workload is doing actual work.
+                unlike traditional cloud providers,{" "}
+                <b>
+                    lttle.cloud charges you only when your workload is doing
+                    actual work.
+                </b>
                 <br />
                 <br />
                 not for idle, not for waiting, and not for over-provisioned
                 infrastructure.
                 <br />
                 <br />
-                there are no hidden costs for keeping a VM warm, no billing
-                while your app waits on an API response, and no surprise spikes
-                because autoscaling lagged behind your traffic. whether you're
-                handling one request or a thousand, you scale without burning
-                money on unused resources.
+                there are <b>no hidden costs</b> for keeping a VM warm, no
+                billing while your app waits on an API response, and no surprise
+                spikes because autoscaling lagged behind your traffic. whether
+                you're handling one request or a thousand, you scale without
+                burning money on unused resources.
                 <br />
                 <br />
-                it's a fairer, leaner approach to cloud billing.
+                it&apos;s a fairer, leaner approach to cloud billing.
                 <br />
                 <br />
                 finally aligned with how your app actually runs.
@@ -171,7 +183,7 @@ const advantageCards: Card[] = [
         title: "a radically simpler stack",
         description: (
             <p>
-                from 7 layers to 4.
+                <b>from 7 layers to 4.</b>
                 <br />
                 <br />
                 forget the tangled mess of: bare metal VM OS container FaaS
@@ -207,8 +219,8 @@ const advantageCards: Card[] = [
                 zero modifications.
                 <br />
                 <br />
-                no migration headaches, no vendor-specific wrappers. just drop
-                your image and go.
+                no migration headaches, no vendor-specific wrappers.{" "}
+                <b>just drop your image and go.</b>
             </p>
         ),
         image: "/assets/icons/cloud-arrow-down.svg",
@@ -224,7 +236,7 @@ const advantageCards: Card[] = [
                 always ready to serve.
                 <br />
                 <br />
-                no warm-up hacks. no scheduled pings.
+                <b>no warm-up hacks. no scheduled pings.</b>
                 <br />
                 <br />
                 your code stays ready. so your users never wait.
@@ -359,6 +371,7 @@ const SectionWhyLttleCloud = () => {
                         className={cls(classes.cardsContainer, classes.problem)}
                         onMouseDown={handleMouseDown}
                         style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                        tabIndex={-1}
                     >
                         {problemCards.map((card) => (
                             <div
@@ -408,6 +421,7 @@ const SectionWhyLttleCloud = () => {
                         )}
                         onMouseDown={handleMouseDown}
                         style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                        tabIndex={-1}
                     >
                         {solutionCards.map((card) => (
                             <div
@@ -458,6 +472,7 @@ const SectionWhyLttleCloud = () => {
                         )}
                         onMouseDown={handleMouseDown}
                         style={{ cursor: isDragging ? "grabbing" : "grab" }}
+                        tabIndex={-1}
                     >
                         {advantageCards.map((card) => (
                             <div
@@ -497,15 +512,15 @@ const SectionWhyLttleCloud = () => {
                 </div>
                 <div className={classes.cardContent}>
                     <p>
-                        why pay for idle? or for compute you’re not using?
+                        why pay for idle? or for compute you&apos;re not using?
                         <br />
                         <br />
-                        lttle.cloud is built for true efficiency, so you only
-                        pay for what you actually run. no overprovisioning. no
-                        mystery pricing. 
+                        lttle.cloud is <b>built for true efficiency</b>, so you
+                        only pay for what you actually run. no overprovisioning.
+                        no mystery pricing.
                         <br />
                         <br />
-                        just a fair deal.
+                        <b>just a fair deal.</b>
                     </p>
                     <Image
                         src="/assets/icons/star.svg"

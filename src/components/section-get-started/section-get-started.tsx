@@ -35,9 +35,9 @@ const SectionGetStarted = () => {
                             be among the firsts to try{" "}
                             <strong>lttle.cloud</strong>
                             <br />
-                            <br /> receive updates and here’s another paragraph
+                            <br /> receive updates and here's another paragraph
                             to make this look a bit fuller because one line of
-                            text doesn’t look like enough
+                            text doesn't look like enough
                         </p>
                         <Button variant="secondary" className={classes.button}>
                             sign up here
@@ -72,35 +72,70 @@ const SectionGetStarted = () => {
                     activeTab={activeTab}
                     onTabChange={setActiveTab}
                 >
-                    <div className={classes.tabContentTerminal}>
-                        <ul>
-                            <li>
-                                <div className={classes.itemTitle}>
-                                    <span>1.</span>
-                                    <p>sign up</p>
-                                </div>
-                                <p>sign up for early access</p>
-                            </li>
-                            <li>
-                                <div className={classes.itemTitle}>
-                                    <span>2.</span>
-                                    <p>connect</p>
-                                </div>
-                                <div className={classes.codeBlock}>
-                                    <p>lttle login</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className={classes.itemTitle}>
-                                    <span>3.</span>
-                                    <p>deploy</p>
-                                </div>
-                                <div className={classes.codeBlock}>
-                                    <p>lttle deploy</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    {activeTab === tabs[0] && (
+                        <div className={classes.tabContent}>
+                            <ul>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>1.</span>
+                                        <p>sign up</p>
+                                    </div>
+                                    <p>sign up for early access</p>
+                                </li>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>2.</span>
+                                        <p>connect</p>
+                                    </div>
+                                    <div className={classes.codeBlock}>
+                                        <p>lttle login</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>3.</span>
+                                        <p>deploy</p>
+                                    </div>
+                                    <div className={classes.codeBlock}>
+                                        <p>lttle deploy</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
+
+                    {activeTab === tabs[1] && (
+                        <div className={classes.tabContent}>
+                            <ul>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>1.</span>
+                                        <p>sign up</p>
+                                    </div>
+                                    <p>install the MCP plugin</p>
+                                </li>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>2.</span>
+                                        <p>connect</p>
+                                    </div>
+                                    <div className={classes.codeBlock}>
+                                        <p>lttle login</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={classes.itemTitle}>
+                                        <span>3.</span>
+                                        <p>deploy</p>
+                                    </div>
+                                    <p>
+                                        just ask your AI tool to deploy your app
+                                        to lttle
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
                 </Tabs>
             </div>
         </section>

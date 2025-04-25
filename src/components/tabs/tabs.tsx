@@ -51,6 +51,7 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
             <div className={classes.tabs}>
                 {tabs.map((tab, index) => (
                     <div
+                        id={tab}
                         key={tab}
                         ref={(el) => (tabRefs.current[index] = el)}
                         className={cls(
@@ -58,6 +59,13 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
                             activeTab === tab ? classes.active : ""
                         )}
                         onClick={() => onTabChange(tab)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                onTabChange(tab);
+                            }
+                        }}
                     >
                         {tab}
                     </div>
@@ -76,7 +84,9 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
                 ))}
                 <div className={cls(classes.tabPadding, classes.buffer)}></div>
             </div>
-            <div className={classes.content}>{children}</div>
+            <div className={classes.content} id={`${activeTab}-content`}>
+                {children}
+            </div>
         </div>
     );
 };

@@ -26,6 +26,21 @@ export const metadata: Metadata = {
 
 const theme = createTheme({
     fontFamily: "var(--font-onest)",
+    components: {
+        Menu: {
+            styles: {
+                dropdown: {
+                    borderRadius: "1rem",
+                    padding: "0",
+                    overflow: "hidden",
+                },
+                item: {
+                    padding: "0.5rem 1rem",
+                    fontWeight: 500,
+                },
+            },
+        },
+    },
 });
 
 export default function RootLayout({

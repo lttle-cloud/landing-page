@@ -132,6 +132,7 @@
             a {
                 font-size: 1.5rem;
                 font-weight: 900;
+                border-radius: 1rem;
 
                 &:hover {
                     text-decoration: underline;
@@ -147,6 +148,10 @@
 
                 &:nth-child(3) {
                     color: $red-2;
+                }
+
+                &:focus-visible {
+                    outline: 3px solid $black-1;
                 }
             }
         }

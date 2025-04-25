@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { KeyboardEventHandler, useEffect, useRef, useState } from "react";
 import classes from "./custom-scrollbar.module.scss";
 import { cls } from "@/lib/utils";
 
@@ -95,6 +95,18 @@ const CustomScrollbar = ({
         setScrollStartPosition(null);
     };
 
+    const moveScroll: KeyboardEventHandler<HTMLDivElement> = (e) => {
+        if (!containerRef.current) return;
+
+        if (e.key === "ArrowLeft") {
+            containerRef.current.scrollLeft =
+                containerRef.current.scrollLeft - 10;
+        } else if (e.key === "ArrowRight") {
+            containerRef.current.scrollLeft =
+                containerRef.current.scrollLeft + 10;
+        }
+    };
+
     useEffect(() => {
         if (scrollStartPosition !== null) {
             document.addEventListener("mousemove", handleDocumentMouseMove);
@@ -117,6 +129,10 @@ const CustomScrollbar = ({
                     ref={scrollThumbRef}
                     style={{ width: `${thumbHeight}px` }}
                     onMouseDown={handleThumbMousedown}
+                    onKeyDown={moveScroll}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Scrollbar"
                 />
             </div>
         </div>
