@@ -5,6 +5,7 @@ import classes from "./section-hero.module.scss";
 import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import WordScrollAnimation from "../scroll-animation/word-scroll-animation";
+import Image from "next/image";
 
 const words = ["bloated", "slow", "expensive", "complex"];
 const TYPING_SPEED = 150;
@@ -48,49 +49,10 @@ const SectionHero = () => {
                     </div>
 
                     <div className={classes.block2}>
-                        {/* <div className={classes.features}>
-                            <h2>run any app as serverless</h2>
-                            <ul>
-                                <li>
-                                    <Image
-                                        className={classes.bullet}
-                                        src="/assets/feature-bullet.svg"
-                                        alt="check"
-                                        width={25}
-                                        height={22}
-                                    />
-                                    <p>with sub-10ms startup</p>
-                                </li>
-                                <li>
-                                    <Image
-                                        className={classes.bullet}
-                                        src="/assets/feature-bullet.svg"
-                                        alt="check"
-                                        width={25}
-                                        height={22}
-                                    />
-                                    <p>from existing Docker images</p>
-                                </li>
-                                <li>
-                                    <Image
-                                        className={classes.bullet}
-                                        src="/assets/feature-bullet.svg"
-                                        alt="check"
-                                        width={25}
-                                        height={22}
-                                    />
-                                    <p>
-                                        and pricing that doesn&apos;t punish you
-                                        for success
-                                    </p>
-                                </li>
-                            </ul>
-                        </div> */}
-
                         <div className={classes.block2Text}>
                             <h2>
                                 deploy your{" "}
-                                <span className={classes.emphasis}>
+                                <span className={classes.wordScrollEmphasis}>
                                     <WordScrollAnimation
                                         words={words2}
                                         scrollDuration={SCROLL_DURATION}
@@ -100,12 +62,51 @@ const SectionHero = () => {
                                 as serverless in seconds
                             </h2>
 
-                            <div className={classes.codeInstructions}>
+                            <div className={classes.features}>
+                                {/* <h2>run any app as serverless</h2> */}
+                                <ul>
+                                    <li>
+                                        <Image
+                                            className={classes.bullet}
+                                            src="/assets/feature-bullet.svg"
+                                            alt="check"
+                                            width={25}
+                                            height={22}
+                                        />
+                                        <p>with sub-10ms startup</p>
+                                    </li>
+                                    <li>
+                                        <Image
+                                            className={classes.bullet}
+                                            src="/assets/feature-bullet.svg"
+                                            alt="check"
+                                            width={25}
+                                            height={22}
+                                        />
+                                        <p>from existing Docker images</p>
+                                    </li>
+                                    <li>
+                                        <Image
+                                            className={classes.bullet}
+                                            src="/assets/feature-bullet.svg"
+                                            alt="check"
+                                            width={25}
+                                            height={22}
+                                        />
+                                        <p>
+                                            and pricing that doesn&apos;t punish
+                                            you for success
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* <div className={classes.codeInstructions}>
                                 <h2>just run:</h2>
                                 <div className={classes.codeBlock}>
                                     <p>lttle deploy</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className={classes.actions}>

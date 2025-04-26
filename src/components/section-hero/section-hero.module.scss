@@ -39,6 +39,13 @@
             font-size: 2rem;
         }
 
+        .wordScrollEmphasis {
+            color: $black-1;
+            font-weight: 900;
+            font-size: 2rem;
+            display: flex;
+        }
+
         .highlight {
             color: $pink-2;
             font-weight: 900;
@@ -172,10 +179,6 @@
     }
 }
 
-.emphasis {
-    position: relative;
-}
-
 @media (max-width: $breakpoint-desktop) {
     .root {
         max-height: unset;
@@ -219,7 +222,7 @@
                         font-size: 1rem;
                     }
 
-                    .emphasis {
+                    .wordScrollEmphasis {
                         font-size: 1.25rem;
                     }
                 }
