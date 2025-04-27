@@ -4,7 +4,7 @@ import classes from "./page-header.module.scss";
 import Image from "next/image";
 import { useBreakpoint } from "@/lib/hooks";
 import Button from "../button/button";
-import { Menu, Text } from "@mantine/core";
+import { Menu } from "@mantine/core";
 import { useState } from "react";
 
 const sizesWithShortLogo = ["mobile", "tablet"];

@@ -53,7 +53,9 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
                     <div
                         id={tab}
                         key={tab}
-                        ref={(el) => (tabRefs.current[index] = el)}
+                        ref={(el) => {
+                            tabRefs.current[index] = el;
+                        }}
                         className={cls(
                             classes.tab,
                             activeTab === tab ? classes.active : ""
@@ -75,7 +77,9 @@ const Tabs = ({ tabs, activeTab, onTabChange, children }: TabsProps) => {
                 {tabs.map((tab, index) => (
                     <div
                         key={tab}
-                        ref={(el) => (paddingRefs.current[index] = el)}
+                        ref={(el) => {
+                            paddingRefs.current[index] = el;
+                        }}
                         className={cls(
                             classes.tabPadding,
                             activeTab === tab ? classes.active : ""

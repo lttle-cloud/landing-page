@@ -13,7 +13,7 @@ const cards: Card[] = [
         title: "zero idle. zero wait. just vibes.",
         description: (
             <p>
-                every millisecond counts. especially when you're chaining
+                every millisecond counts. especially when you&apos;re chaining
                 requests through LLMs, edge functions, and dynamic APIs.
                 <br />
                 <br />
@@ -23,7 +23,7 @@ const cards: Card[] = [
                 waiting on a webhook to return?
                 <br />
                 waiting on a fetch call from hell to hit timeout?
-                <br /> you’re still paying for idle.
+                <br /> you&apos;re still paying for idle.
             </p>
         ),
         color: "red",

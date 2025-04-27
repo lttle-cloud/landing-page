@@ -1,6 +1,6 @@
 "use client";
 
-import { cls, isOverflowing } from "@/lib/utils";
+import { cls } from "@/lib/utils";
 import LttleCloudSpan from "../lttle-cloud-span/lttle-cloud-span";
 import Separator from "../separator/separator";
 import classes from "./section-why-lttle-cloud.module.scss";
@@ -164,7 +164,7 @@ const solutionCards: Card[] = [
                 there are <b>no hidden costs</b> for keeping a VM warm, no
                 billing while your app waits on an API response, and no surprise
                 spikes because autoscaling lagged behind your traffic. whether
-                you're handling one request or a thousand, you scale without
+                you&apos;re handling one request or a thousand, you scale without
                 burning money on unused resources.
                 <br />
                 <br />

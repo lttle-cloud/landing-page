@@ -9,6 +9,8 @@ import SectionWhyLttleCloud from "@/components/section-why-lttle-cloud/section-w
 import SectionVibeDevops from "@/components/section-vibe-devops/section-vibe-devops";
 import TopBanner from "@/components/top-banner/top-banner";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
     return (
         <div className={classes.root}>

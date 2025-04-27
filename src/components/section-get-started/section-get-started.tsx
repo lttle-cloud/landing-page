@@ -35,9 +35,9 @@ const SectionGetStarted = () => {
                             be among the firsts to try{" "}
                             <strong>lttle.cloud</strong>
                             <br />
-                            <br /> receive updates and here's another paragraph
-                            to make this look a bit fuller because one line of
-                            text doesn't look like enough
+                            <br /> receive updates and here&apos;s another
+                            paragraph to make this look a bit fuller because one
+                            line of text doesn&apos;t look like enough
                         </p>
                         <Button variant="secondary" className={classes.button}>
                             sign up here
