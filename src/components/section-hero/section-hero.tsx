@@ -4,18 +4,13 @@
 import classes from "./section-hero.module.scss";
 import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
-import WordScrollAnimation from "../scroll-animation/word-scroll-animation";
 import Image from "next/image";
 
-const words = ["bloated", "slow", "expensive", "complex"];
+
+const words = ["web app", "ai agent", "api", "any docker image"];
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 100;
 const TYPING_PAUSE_TIME = 2000;
-
-const SCROLL_DURATION = 2000;
-const SCROLL_PAUSE_TIME = 1000;
-
-const words2 = ["web app", "api", "cli", "docker image"];
 
 const SectionHero = () => {
     return (
@@ -26,14 +21,8 @@ const SectionHero = () => {
                         <h1>
                             the cloud is{" "}
                             <span className={classes.emphasis}>
-                                <TypewriterAnimation
-                                    words={words}
-                                    typingSpeed={TYPING_SPEED}
-                                    deletingSpeed={DELETING_SPEED}
-                                    pauseTime={TYPING_PAUSE_TIME}
-                                />
-                            </span>{" "}
-                            ,
+                                bloated
+                            </span>,
                             <br />
                             so we tore it down and
                             <br />
@@ -53,10 +42,11 @@ const SectionHero = () => {
                             <h2>
                                 deploy your{" "}
                                 <span className={classes.wordScrollEmphasis}>
-                                    <WordScrollAnimation
-                                        words={words2}
-                                        scrollDuration={SCROLL_DURATION}
-                                        pauseTime={SCROLL_PAUSE_TIME}
+                                    <TypewriterAnimation
+                                        words={words}
+                                        typingSpeed={TYPING_SPEED}
+                                        deletingSpeed={DELETING_SPEED}
+                                        pauseTime={TYPING_PAUSE_TIME}
                                     />
                                 </span>{" "}
                                 as serverless in seconds
