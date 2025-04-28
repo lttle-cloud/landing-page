@@ -55,8 +55,14 @@ const problemCards: Card[] = [
                 <br />
                 <br />
                 each decision, whether to scale VMs, adopt functions, or manage
-                containers, comes with hidden trade-offs, vendor lock-in, and a
-                tangled mess of configuration and cost.
+                containers, comes with:
+                <br />
+                <br />
+                hidden trade-offs,
+                <br />
+                vendor lock-in,
+                <br/>
+                and a tangled mess of configuration and cost.
             </p>
         ),
         image: "/assets/icons/lock-closed.svg",
@@ -180,30 +186,23 @@ const solutionCards: Card[] = [
 
 const advantageCards: Card[] = [
     {
-        title: "a radically simpler stack",
+        title: "no cold starts. ever.",
         description: (
             <p>
-                <b>from 7 layers to 4.</b>
+                tired of your app waking up slower than a Monday morning?
                 <br />
                 <br />
-                forget the tangled mess of: bare metal VM OS container FaaS
-                (function as a service) (ex: aws lambda, GCP functions) runtime
-                (nodejs) your code
+                our infrastructure ensures workloads spin up in under 10ms,
+                always ready to serve.
                 <br />
                 <br />
-                with lttle.cloud, you deploy straight to the metal with just:
+                <b>no warm-up hacks. no scheduled pings.</b>
                 <br />
                 <br />
-                bare metal micro VM lttle runtime (Node JS) your code
-                <br />
-                <br />
-                less abstraction. less latency. less to go wrong. more secure.
-                <br />
-                <br />
-                faster builds, easier debugging, and a cleaner dev experience.
+                your code stays ready. so your users never wait.
             </p>
         ),
-        image: "/assets/icons/database.svg",
+        image: "/assets/icons/fire.svg",
     },
     {
         title: "use your existing Docker images",
@@ -226,23 +225,21 @@ const advantageCards: Card[] = [
         image: "/assets/icons/cloud-arrow-down.svg",
     },
     {
-        title: "no cold starts. ever.",
+        title: "a fair price. unlike others 🙄",
         description: (
             <p>
-                tired of your app waking up slower than a Monday morning?
+                why pay for idle? or for compute you&apos;re not using?
                 <br />
                 <br />
-                our infrastructure ensures workloads spin up in under 10ms,
-                always ready to serve.
+                lttle.cloud is <b>built for true efficiency</b>, so you
+                only pay for what you actually run. no overprovisioning.
+                no mystery pricing.
                 <br />
                 <br />
-                <b>no warm-up hacks. no scheduled pings.</b>
-                <br />
-                <br />
-                your code stays ready. so your users never wait.
+                <b>just a fair deal.</b>
             </p>
         ),
-        image: "/assets/icons/fire.svg",
+        image: "/assets/icons/cloud-arrow-down.svg",
     },
 ];
 
@@ -352,9 +349,7 @@ const SectionWhyLttleCloud = () => {
                     </h2>
                     <Separator width="100px" height="8px" color="red" />
                     <p>
-                        cute subtitle about getting started here maybe hmm,
-                        something about this long yeah seems right
-                        <br /> maybe a couple of paragraphs hmmm
+                        if you&apos;ve been working on cloud, you know the drill
                     </p>
                 </div>
             </div>
@@ -504,32 +499,6 @@ const SectionWhyLttleCloud = () => {
                             />
                         </div>
                     )}
-                </div>
-            </div>
-            <div className={classes.specialCard}>
-                <div className={classes.cardHeader}>
-                    <h4>a fair price. unlike others 🙄</h4>
-                </div>
-                <div className={classes.cardContent}>
-                    <p>
-                        why pay for idle? or for compute you&apos;re not using?
-                        <br />
-                        <br />
-                        lttle.cloud is <b>built for true efficiency</b>, so you
-                        only pay for what you actually run. no overprovisioning.
-                        no mystery pricing.
-                        <br />
-                        <br />
-                        <b>just a fair deal.</b>
-                    </p>
-                    <Image
-                        src="/assets/icons/star.svg"
-                        alt="star"
-                        width={200}
-                        height={200}
-                        role="presentation"
-                        className={classes.illustration}
-                    />
                 </div>
             </div>
         </section>

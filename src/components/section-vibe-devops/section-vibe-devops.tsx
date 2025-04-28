@@ -113,10 +113,9 @@ const SectionVibeDevops = () => {
                     introducing <span>vibe devops</span>
                 </h2>
                 <p>
-                    cute description about vibe devops here maybe hmm, something
-                    about this long yeah seems right
-                    <br />
-                    maybe a couple of paragraphs hmmm
+                vibe devops is a new way of deploying apps where code runs instantly, scales effortlessly, and you only pay when real work happens.
+                <br/>
+                it’s devops without the heavy lifting: fast, event-driven, and built to flow with modern AI tools and dynamic workloads.
                 </p>
             </div>
             <div className={classes.cardsContainer}>
