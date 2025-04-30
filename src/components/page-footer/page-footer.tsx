@@ -4,6 +4,7 @@ import Image from "next/image";
 import classes from "./page-footer.module.scss";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Fragment } from "react";
 
 const links = [
     {
@@ -43,15 +44,10 @@ const PageFooter = () => {
                     </p>
                     <ul>
                         {links.map((link, index) => (
-                            <>
-                                <Link
-                                    href={link.href}
-                                    key={`${link.label}-${index}`}
-                                >
-                                    {link.label}
-                                </Link>
+                            <Fragment key={`${link.label}-${index}`}>
+                                <Link href={link.href}>{link.label}</Link>
                                 {index < links.length - 1 && "•"}
-                            </>
+                            </Fragment>
                         ))}
                     </ul>
                 </div>

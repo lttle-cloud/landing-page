@@ -11,6 +11,23 @@ import TopBanner from "@/components/top-banner/top-banner";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+    title: "lttle.cloud",
+    description: "no cold starts. no middle layers. no vendor traps.",
+    keywords: [
+        "lttle.cloud",
+        "lttle",
+        "cloud",
+        "lttle cloud",
+        "lttle cloud services",
+    ],
+    openGraph: {
+        title: "lttle.cloud",
+        description: "no cold starts. no middle layers. no vendor traps.",
+        images: ["/public/assets/images/og-image.png"],
+    },
+};
+
 export default function Home() {
     return (
         <div className={classes.root}>
