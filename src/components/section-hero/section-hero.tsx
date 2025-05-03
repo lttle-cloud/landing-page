@@ -7,7 +7,7 @@ import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import Image from "next/image";
 
 
-const words = ["web app", "ai agent", "api", "any docker image"];
+const words = ["web app", "ai agent", "api", "docker image"];
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 100;
 const TYPING_PAUSE_TIME = 2000;
