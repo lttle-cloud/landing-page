@@ -1,6 +1,9 @@
 @use "@/app/variables.scss" as *;
 
 .container {
+    position: relative;
+    margin-right: 10px;
+
     &::after {
         content: "|";
         position: absolute;
