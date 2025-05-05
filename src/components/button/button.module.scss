@@ -45,6 +45,42 @@
         }
     }
 
+    &.teal {
+        @extend .primary;
+
+        background-color: $teal-1;
+        color: $true-white;
+
+        box-shadow: $shadow-teal;
+
+        &:hover {
+            box-shadow: $shadow-teal-hover;
+        }
+
+        &:active {
+            box-shadow: $shadow-blue-active;
+            background-color: $teal-2;
+        }
+    }
+
+    &.red {
+        @extend .primary;
+
+        background-color: $red-2;
+        color: $true-white;
+
+        box-shadow: $shadow-red;
+
+        &:hover {
+            box-shadow: $shadow-red-hover;
+        }
+
+        &:active {
+            background-color: $red-3;
+            box-shadow: $shadow-red-active;
+        }
+    }
+
     &:focus-visible {
         outline: 3px solid $black-3;
         outline-offset: 4px;

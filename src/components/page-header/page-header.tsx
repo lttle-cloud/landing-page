@@ -6,6 +6,8 @@ import { useBreakpoint } from "@/lib/hooks";
 import Button from "../button/button";
 import { Menu } from "@mantine/core";
 import { useState } from "react";
+import Link from "next/link";
+import { CONTACT_EMAIL, IGNITION_URL } from "@/app/constants";
 
 const sizesWithShortLogo = ["mobile", "tablet"];
 
@@ -16,11 +18,11 @@ const navItems = [
     },
     {
         label: "get started",
-        href: "/get-started",
+        href: "/#get-started",
     },
     {
         label: "why lttle.cloud",
-        href: "/why-lttle-cloud",
+        href: "/#why-lttle-cloud",
     },
     {
         label: "pricing",
@@ -28,7 +30,7 @@ const navItems = [
     },
     {
         label: "contact",
-        href: "/contact",
+        href: `mailto:${CONTACT_EMAIL}`,
     },
     {
         label: "use cases",
@@ -36,7 +38,8 @@ const navItems = [
     },
     {
         label: "resources",
-        href: "/resources",
+        href: IGNITION_URL,
+        external: true,
     },
     {
         label: "about us",
@@ -58,28 +61,35 @@ const PageHeader = () => {
 
     return (
         <header className={classes.root}>
-            {sizesWithShortLogo.includes(breakpoint) ? (
-                <Image
-                    src={"/assets/logo-short.svg"}
-                    alt="logo"
-                    width={88}
-                    height={66}
-                />
-            ) : (
-                <Image
-                    src={"/assets/logo-long.svg"}
-                    alt="logo"
-                    width={225}
-                    height={70}
-                />
-            )}
+            <Link href="/">
+                {sizesWithShortLogo.includes(breakpoint) ? (
+                    <Image
+                        src={"/assets/logo-short.svg"}
+                        alt="logo"
+                        width={88}
+                        height={66}
+                    />
+                ) : (
+                    <Image
+                        src={"/assets/logo-long.svg"}
+                        alt="logo"
+                        width={225}
+                        height={70}
+                    />
+                )}
+            </Link>
 
             {!sizesWithShortLogo.includes(breakpoint) ? (
                 <>
                     <ul className={classes.nav}>
                         {navItems.map((item) => (
                             <li key={item.label}>
-                                <a href={item.href}>{item.label}</a>
+                                <a
+                                    href={item.href}
+                                    target={item.external ? "_blank" : "_self"}
+                                >
+                                    {item.label}
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -116,6 +126,7 @@ const PageHeader = () => {
                                 key={item.label}
                                 component="a"
                                 href={item.href}
+                                target={item.external ? "_blank" : "_self"}
                             >
                                 {item.label}
                             </Menu.Item>

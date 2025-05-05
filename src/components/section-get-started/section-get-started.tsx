@@ -12,7 +12,7 @@ const tabs = ["terminal power", "vibe devops"];
 const SectionGetStarted = () => {
     const [activeTab, setActiveTab] = useState(tabs[0]);
     return (
-        <section className={classes.root}>
+        <section className={classes.root} id="get-started">
             <div className={classes.content}>
                 <div className={classes.titleContainer}>
                     <h2>
@@ -20,8 +20,9 @@ const SectionGetStarted = () => {
                     </h2>
                     <Separator width="100px" height="8px" color="teal" />
                     <p>
-                    lttle.cloud is the cloud you’d build yourself
-                    <br /> * [ if you had the time, the rage, and the resources ]
+                        lttle.cloud is the cloud you’d build yourself
+                        <br /> * [ if you had the time, the rage, and the
+                        resources ]
                     </p>
                 </div>
                 <div className={classes.cardsContainer}>
@@ -35,7 +36,9 @@ const SectionGetStarted = () => {
                             <strong>lttle.cloud</strong>
                             <br />
                             <br />
-                            get hands-on access to instant workloads, true pay-for-what-you-use pricing, and a developer experience that works beautifully.
+                            get hands-on access to instant workloads, true
+                            pay-for-what-you-use pricing, and a developer
+                            experience that works beautifully.
                         </p>
                         <Button variant="secondary" className={classes.button}>
                             sign up here
@@ -50,7 +53,9 @@ const SectionGetStarted = () => {
                             prefer to run your own stack?
                             <br />
                             <br />
-                            check out our github for setup instructions, source code, and everything you need to launch your own cloud.
+                            check out our github for setup instructions, source
+                            code, and everything you need to launch your own
+                            cloud.
                         </p>
                         <Button variant="secondary" className={classes.button}>
                             github
@@ -61,7 +66,9 @@ const SectionGetStarted = () => {
                 <div className={classes.titleContainer}>
                     <h2>setup is easy</h2>
                     <p>
-                        whether you love the terminal or prefer a fully AI-powered flow, getting your app live on lttle.cloud takes just a few steps.
+                        whether you love the terminal or prefer a fully
+                        AI-powered flow, getting your app live on lttle.cloud
+                        takes just a few steps.
                         <br />
                         pick your vibe and start deploying.
                     </p>
@@ -74,7 +81,7 @@ const SectionGetStarted = () => {
                 >
                     {activeTab === tabs[0] && (
                         <div className={classes.tabContent}>
-                            <h2> 
+                            <h2>
                                 prefer the CLI? get up and running in seconds.
                             </h2>
                             <ul>
@@ -83,7 +90,10 @@ const SectionGetStarted = () => {
                                         <span>1.</span>
                                         <p>install the CLI</p>
                                     </div>
-                                    <p>🔒 sign up for early access for installation instructions</p>
+                                    <p>
+                                        🔒 sign up for early access for
+                                        installation instructions
+                                    </p>
                                 </li>
                                 <li>
                                     <div className={classes.itemTitle}>
@@ -109,8 +119,9 @@ const SectionGetStarted = () => {
 
                     {activeTab === tabs[1] && (
                         <div className={classes.tabContent}>
-                            <h2> 
-                                want to deploy straight from Claude Desktop, Cursor, or any AI tool with MCP support?
+                            <h2>
+                                want to deploy straight from Claude Desktop,
+                                Cursor, or any AI tool with MCP support?
                             </h2>
                             <ul>
                                 <li>
@@ -118,7 +129,10 @@ const SectionGetStarted = () => {
                                         <span>1.</span>
                                         <p>install the MCP plugin</p>
                                     </div>
-                                    <p>🔒 sign up for early access for installation instructions</p>
+                                    <p>
+                                        🔒 sign up for early access for
+                                        installation instructions
+                                    </p>
                                 </li>
                                 <li>
                                     <div className={classes.itemTitle}>
@@ -126,16 +140,13 @@ const SectionGetStarted = () => {
                                         <p>connect</p>
                                     </div>
                                     <p>sign in with your lttle.cloud account</p>
-
                                 </li>
                                 <li>
                                     <div className={classes.itemTitle}>
                                         <span>3.</span>
                                         <p>just ask your AI tool</p>
                                     </div>
-                                    <p>
-                                        &quot;deploy this app to lttle.&quot;
-                                    </p>
+                                    <p>&quot;deploy this app to lttle.&quot;</p>
                                 </li>
                             </ul>
                         </div>

@@ -5,6 +5,13 @@ import classes from "./page-footer.module.scss";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Fragment } from "react";
+import { CONTACT_EMAIL } from "@/app/constants";
+
+type Social = {
+    label: string;
+    href: string;
+    icon: string;
+};
 
 const links = [
     {
@@ -13,13 +20,32 @@ const links = [
     },
     {
         label: "About",
-        href: "/about",
+        href: "/about-us",
     },
     {
         label: "Contact",
-        href: "/contact",
+        href: `mailto:${CONTACT_EMAIL}`,
     },
 ];
+
+const socials: Social[] = [
+    {
+        label: "X",
+        href: "https://x.com/lttlecloud_",
+        icon: "/assets/icons/social-media-x.svg",
+    },
+    {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/lttle-cloud/",
+        icon: "/assets/icons/social-media-linkedin.svg",
+    },
+    {
+        label: "Discord",
+        href: "https://discord.gg/xhNGGrZQja",
+        icon: "/assets/icons/social-media-discord.svg",
+    },
+];
+
 const PageFooter = () => {
     const currentYear = new Date().getFullYear();
     const [windowWidth, setWindowWidth] = useState(0);
@@ -51,7 +77,26 @@ const PageFooter = () => {
                         ))}
                     </ul>
                 </div>
-                <div className={classes.socials}></div>
+                <div className={classes.socials}>
+                    {socials.map((social, index) => (
+                        <Fragment key={`${social.label}-${index}`}>
+                            <Link
+                                href={social.href}
+                                target="_blank"
+                                className={classes.social}
+                                rel="noopener noreferrer"
+                                aria-label={social.label}
+                            >
+                                <Image
+                                    src={social.icon}
+                                    alt={social.label}
+                                    width={24}
+                                    height={24}
+                                />
+                            </Link>
+                        </Fragment>
+                    ))}
+                </div>
             </div>
             <div
                 className={classes.graphicContainer}

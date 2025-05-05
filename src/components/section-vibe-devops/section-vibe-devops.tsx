@@ -107,15 +107,19 @@ const cards: Card[] = [
 
 const SectionVibeDevops = () => {
     return (
-        <div className={classes.root}>
+        <section className={classes.root} id="vibe-devops">
             <div className={classes.titleContainer}>
                 <h2>
                     introducing <span>vibe devops</span>
                 </h2>
                 <p>
-                vibe devops is a new way of deploying apps where code runs instantly, scales effortlessly, and you only pay when real work happens.
-                <br/>
-                it’s devops without the heavy lifting: fast, event-driven, and built to flow with modern AI tools and dynamic workloads.
+                    vibe devops is a new way of deploying apps where code runs
+                    instantly, scales effortlessly, and you only pay when real
+                    work happens.
+                    <br />
+                    it’s devops without the heavy lifting: fast, event-driven,
+                    and built to flow with modern AI tools and dynamic
+                    workloads.
                 </p>
             </div>
             <div className={classes.cardsContainer}>
@@ -150,7 +154,7 @@ const SectionVibeDevops = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

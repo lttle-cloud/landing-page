@@ -61,7 +61,7 @@ const problemCards: Card[] = [
                 hidden trade-offs,
                 <br />
                 vendor lock-in,
-                <br/>
+                <br />
                 and a tangled mess of configuration and cost.
             </p>
         ),
@@ -170,8 +170,8 @@ const solutionCards: Card[] = [
                 there are <b>no hidden costs</b> for keeping a VM warm, no
                 billing while your app waits on an API response, and no surprise
                 spikes because autoscaling lagged behind your traffic. whether
-                you&apos;re handling one request or a thousand, you scale without
-                burning money on unused resources.
+                you&apos;re handling one request or a thousand, you scale
+                without burning money on unused resources.
                 <br />
                 <br />
                 it&apos;s a fairer, leaner approach to cloud billing.
@@ -231,9 +231,9 @@ const advantageCards: Card[] = [
                 why pay for idle? or for compute you&apos;re not using?
                 <br />
                 <br />
-                lttle.cloud is <b>built for true efficiency</b>, so you
-                only pay for what you actually run. no overprovisioning.
-                no mystery pricing.
+                lttle.cloud is <b>built for true efficiency</b>, so you only pay
+                for what you actually run. no overprovisioning. no mystery
+                pricing.
                 <br />
                 <br />
                 <b>just a fair deal.</b>
@@ -341,7 +341,7 @@ const SectionWhyLttleCloud = () => {
     }, [handleMouseUp, handleMouseMove]);
 
     return (
-        <section className={classes.root}>
+        <section className={classes.root} id="why-lttle-cloud">
             <div className={classes.content}>
                 <div className={classes.titleContainer}>
                     <h2>

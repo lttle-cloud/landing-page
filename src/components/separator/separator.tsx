@@ -3,7 +3,7 @@ import classes from "./separator.module.scss";
 interface SeparatorProps {
     width?: string;
     height?: string;
-    color?: "teal" | "pink" | "red";
+    color?: "teal" | "pink" | "red" | "purple";
 }
 
 const Separator = ({ width, height, color }: SeparatorProps) => {

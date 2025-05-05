@@ -5,7 +5,7 @@ import { cls } from "@/lib/utils";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     children: React.ReactNode;
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "teal" | "red" | "purple";
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(

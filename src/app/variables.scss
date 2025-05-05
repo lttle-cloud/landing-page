@@ -69,6 +69,7 @@ $breakpoint-large: 1440px;
 
 $font-onest: var(--font-onest);
 $width-content: 1200px;
+$width-content-small: 900px;
 
 //shadows
 $shadow-pink: 5px 5px 0px 0px $pink-3;
@@ -80,6 +81,20 @@ $shadow-black-hover: 3px 3px 0px 0px $black-3;
 $shadow-black-active: 1px 1px 0px 0px $black-3;
 
 $shadow-blue: 5px 5px 0px 0px $blue-3;
+$shadow-blue-hover: 3px 3px 0px 0px $blue-3;
+$shadow-blue-active: 1px 1px 0px 0px $blue-3;
+
+$shadow-teal: 5px 5px 0px 0px $teal-3;
+$shadow-teal-hover: 3px 3px 0px 0px $teal-3;
+$shadow-teal-active: 1px 1px 0px 0px $teal-3;
+
+$shadow-red: 5px 5px 0px 0px $red-3;
+$shadow-red-hover: 3px 3px 0px 0px $red-3;
+$shadow-red-active: 1px 1px 0px 0px $red-3;
+
+$shadow-purple: 5px 5px 0px 0px $purple-3;
+$shadow-purple-hover: 3px 3px 0px 0px $purple-3;
+$shadow-purple-active: 1px 1px 0px 0px $purple-3;
 
 @mixin pop-out-card {
     background-color: $true-white;
@@ -125,6 +140,7 @@ $shadow-blue: 5px 5px 0px 0px $blue-3;
         font-size: 3rem;
         font-weight: 700;
         text-align: center;
+        line-height: 1.2;
     }
 
     p {

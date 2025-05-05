@@ -1,4 +1,4 @@
-import classes from "./page.module.scss";
+import rootClasses from "./root.module.scss";
 import PageHeader from "@/components/page-header/page-header";
 import PageFooter from "@/components/page-footer/page-footer";
 import SectionHero from "@/components/section-hero/section-hero";
@@ -30,17 +30,17 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <div className={classes.root}>
+        <div className={rootClasses.root}>
             <TopBanner time={1.215} />
             <PageHeader />
-            <main className={classes.main}>
+            <main className={rootClasses.main}>
                 <SectionHero />
                 {/* <SectionEasyDeploy /> */}
                 <SectionGetStarted />
-                <ShapesMarquee />
+                <ShapesMarquee direction="right" />
                 <SectionWhyLttleCloud />
                 <SectionVibeDevops />
-                <ShapesMarquee />
+                <ShapesMarquee direction="left" />
             </main>
             <PageFooter />
         </div>
