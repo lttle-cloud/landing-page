@@ -25,6 +25,7 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
+        color: $true-white;
 
         .copyright {
             font-size: 0.75rem;
@@ -35,6 +36,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            color: inherit;
 
             a {
                 font-size: 0.75rem;

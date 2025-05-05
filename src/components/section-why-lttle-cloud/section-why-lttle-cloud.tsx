@@ -239,7 +239,7 @@ const advantageCards: Card[] = [
                 <b>just a fair deal.</b>
             </p>
         ),
-        image: "/assets/icons/cloud-arrow-down.svg",
+        image: "/assets/icons/receipt.svg",
     },
 ];
 
