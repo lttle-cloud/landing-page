@@ -133,6 +133,14 @@ const PageHeader = () => {
                                 {item.label}
                             </Menu.Item>
                         ))}
+                        <Menu.Item
+                            key="sign-up"
+                            component="a"
+                            href={SIGN_UP_URL}
+                            target="_blank"
+                        >
+                            sign up
+                        </Menu.Item>
                     </Menu.Dropdown>
                 </Menu>
             )}
