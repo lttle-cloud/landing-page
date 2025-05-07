@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata = {
     title: "lttle.cloud",
-    description: "no cold starts. no middle layers. no vendor traps.",
+    description: "no rewrites. no cold starts. no paying for idle.",
     keywords: [
         "lttle.cloud",
         "lttle",
@@ -23,7 +23,7 @@ export const metadata = {
     ],
     openGraph: {
         title: "lttle.cloud",
-        description: "no cold starts. no middle layers. no vendor traps.",
+        description: "no rewrites. no cold starts. no paying for idle.",
         images: ["/public/assets/images/og-image.png"],
     },
 };
