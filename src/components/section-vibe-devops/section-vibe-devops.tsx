@@ -50,19 +50,6 @@ const cards: Card[] = [
         color: "gray",
     },
     {
-        title: "ideal for LLM-powered workflows, realtime backends, and microservice chains",
-        description: (
-            <p>
-                waiting for a response from OpenAI’s API?
-                <br />
-                <br />
-                we pause the meter until you’re actually computing again. your
-                wallet breathes. your app flies. your ops team chills.
-            </p>
-        ),
-        color: "cream",
-    },
-    {
         title: "what is vibe devops?",
         description: (
             <p>
