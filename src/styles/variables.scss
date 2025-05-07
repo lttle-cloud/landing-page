@@ -68,8 +68,8 @@ $breakpoint-desktop: 1024px;
 $breakpoint-large: 1440px;
 
 $font-onest: var(--font-onest);
-$width-content: 1200px;
-$width-content-small: 900px;
+$width-content: min(1200px, 100%);
+$width-content-small: min(900px, 100%);
 
 //shadows
 $shadow-pink: 5px 5px 0px 0px $pink-3;

@@ -60,3 +60,18 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: $breakpoint-tablet) {
+    .blogPostContainer {
+        padding: 1rem;
+
+        .blogPostHeader {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        .blogPostContent {
+            font-size: 0.8rem;
+        }
+    }
+}

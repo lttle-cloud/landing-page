@@ -154,3 +154,42 @@
         }
     }
 }
+
+@media screen and (max-width: $breakpoint-desktop) {
+    .blogContainer {
+        .main {
+            .mainContent {
+                flex-direction: column;
+
+                .sidebar {
+                    .sidebarCard {
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+    .blogContainer {
+        padding: 2rem 1rem;
+        .main {
+            .titleContainer {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

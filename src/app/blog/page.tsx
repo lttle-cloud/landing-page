@@ -101,17 +101,29 @@ export default async function Blog() {
 
                                 <div className={blogClasses.buttonsContainer}>
                                     <Link href={IGNITION_URL} target="_blank">
-                                        <Button variant="primary" width="full">
+                                        <Button
+                                            variant="primary"
+                                            width="full"
+                                            tabIndex={-1}
+                                        >
                                             github
                                         </Button>
                                     </Link>
                                     <Link href={DISCORD_URL} target="_blank">
-                                        <Button variant="purple" width="full">
+                                        <Button
+                                            variant="purple"
+                                            width="full"
+                                            tabIndex={-1}
+                                        >
                                             discord
                                         </Button>
                                     </Link>
                                     <Link href={LINKEDIN_URL} target="_blank">
-                                        <Button variant="blue" width="full">
+                                        <Button
+                                            variant="blue"
+                                            width="full"
+                                            tabIndex={-1}
+                                        >
                                             linkedin
                                         </Button>
                                     </Link>
