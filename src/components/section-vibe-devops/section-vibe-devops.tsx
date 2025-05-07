@@ -28,6 +28,30 @@ const cards: Card[] = [
         ),
         color: "red",
     },
+    
+    {
+        title: "what is vibe devops?",
+        description: (
+            <p>
+                fire-and-forget workloads that spin up fast, do one job, and
+                disappear
+                <br />
+                <br />
+                sub-10ms cold start, even for first-time requests
+                <br />
+                <br />
+                full compatibility with any frameworks and existing Docker
+                images (yes, even your own)
+                <br />
+                <br />
+                fully usable straight from your AI agent workflow
+                <br />
+                <br />
+                built for the open world
+            </p>
+        ),
+        color: "blue",
+    },
     {
         title: "stop burning compute just to hold the line",
         description: (
@@ -48,29 +72,6 @@ const cards: Card[] = [
             </p>
         ),
         color: "gray",
-    },
-    {
-        title: "what is vibe devops?",
-        description: (
-            <p>
-                fire-and-forget workloads that spin up fast, do one job, and
-                disappear
-                <br />
-                <br />
-                sub-10ms cold start, even for first-time requests
-                <br />
-                <br />
-                no idle billing while your function is blocked on an external
-                API
-                <br />
-                <br />
-                full compatibility with Docker and modern backend frameworks
-                <br />
-                <br />
-                built for the open world
-            </p>
-        ),
-        color: "blue",
     },
     {
         title: "want to try it?",

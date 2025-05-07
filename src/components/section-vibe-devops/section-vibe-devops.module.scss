@@ -66,6 +66,10 @@
 
             &.red {
                 background-color: $red-2;
+            }
+
+            &.red p,
+            &.red h3 {
                 color: $true-white;
             }
 
@@ -79,6 +83,10 @@
 
             &.blue {
                 background-color: $blue-1;
+            }
+
+            &.blue p,
+            &.blue h3 {
                 color: $true-white;
             }
 
