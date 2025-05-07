@@ -5,7 +5,12 @@ import classes from "./page-footer.module.scss";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Fragment } from "react";
-import { CONTACT_EMAIL } from "@/app/constants";
+import {
+    CONTACT_EMAIL,
+    DISCORD_URL,
+    LINKEDIN_URL,
+    X_URL,
+} from "@/app/constants";
 
 type Social = {
     label: string;
@@ -31,17 +36,17 @@ const links = [
 const socials: Social[] = [
     {
         label: "X",
-        href: "https://x.com/lttlecloud_",
+        href: X_URL,
         icon: "/assets/icons/social-media-x.svg",
     },
     {
         label: "LinkedIn",
-        href: "https://www.linkedin.com/company/lttle-cloud/",
+        href: LINKEDIN_URL,
         icon: "/assets/icons/social-media-linkedin.svg",
     },
     {
         label: "Discord",
-        href: "https://discord.gg/xhNGGrZQja",
+        href: DISCORD_URL,
         icon: "/assets/icons/social-media-discord.svg",
     },
 ];

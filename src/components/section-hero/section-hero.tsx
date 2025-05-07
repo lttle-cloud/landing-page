@@ -6,7 +6,6 @@ import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import Image from "next/image";
 
-
 const words = ["web app", "ai agent", "api", "database"];
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 100;
@@ -20,9 +19,7 @@ const SectionHero = () => {
                     <div className={classes.block1}>
                         <h1>
                             the cloud is{" "}
-                            <span className={classes.emphasis}>
-                                bloated
-                            </span>,
+                            <span className={classes.emphasis}>bloated</span>,
                             <br />
                             so we tore it down and
                             <br />
@@ -100,9 +97,9 @@ const SectionHero = () => {
                         </div>
 
                         <div className={classes.actions}>
-                            <a href="/get-started">get started</a>
-                            <a href="/how-it-works">how it works</a>
-                            <a href="/vibe-devops">vibe devops</a>
+                            <a href="#get-started">get started</a>
+                            <a href="#how-it-works">how it works</a>
+                            <a href="#vibe-devops">vibe devops</a>
                         </div>
                     </div>
                 </div>

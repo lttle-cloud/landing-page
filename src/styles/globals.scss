@@ -32,6 +32,16 @@ a {
     text-decoration: none;
 }
 
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        Liberation Mono, Courier New, monospace;
+
+    span {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            Liberation Mono, Courier New, monospace;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -43,4 +53,5 @@ span,
 a,
 b {
     color: inherit;
+    line-height: 1.27;
 }

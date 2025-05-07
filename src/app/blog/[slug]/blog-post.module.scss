@@ -1,0 +1,62 @@
+@use "@/styles/variables.scss" as *;
+
+.blogPostContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: $width-content;
+    padding: 2rem;
+
+    .blogPostHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: $black-2;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $black-1;
+        }
+
+        .blogPostSubHeader {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .blogPostAuthorContainer {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .blogPostAuthor {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $black-2;
+                }
+            }
+
+            .blogPostDate {
+                font-size: 1rem;
+                font-weight: 500;
+                color: $gray-3;
+            }
+        }
+    }
+
+    .blogPostCoverImage {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .blogPostContent {
+        max-width: $width-content-small;
+        margin: 0 auto;
+    }
+}

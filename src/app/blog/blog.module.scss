@@ -1,0 +1,156 @@
+@use "@/styles/variables.scss" as *;
+
+.blogContainer {
+    background-color: $light-gray-1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .main {
+        max-width: $width-content;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        .titleContainer {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 500;
+                color: $black-2;
+
+                span {
+                    color: $pink-2;
+                    font-weight: 900;
+                }
+            }
+
+            p {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $gray-3;
+            }
+        }
+
+        .mainContent {
+            display: flex;
+            gap: 2rem;
+            width: 100%;
+            justify-content: space-between;
+
+            .postList {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                flex-basis: 67%;
+            }
+
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                flex-basis: 33%;
+
+                .sidebarCard {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    padding: 2rem;
+
+                    h2 {
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        color: $black-2;
+                    }
+
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        color: $black-2;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: $black-1;
+                    }
+                }
+
+                .authorCard {
+                    @include pop-out-card-light;
+                    @extend .sidebarCard;
+
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    .authorCardImage {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 128px;
+                        height: 128px;
+                        overflow: hidden;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        border-radius: 50%;
+                        border: 5px solid $blue-3;
+                        box-shadow: $shadow-gray1;
+                    }
+                }
+
+                .featuredPostsCard {
+                    @include pop-out-card-light;
+                    @extend .sidebarCard;
+
+                    .featuredPostsList {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                }
+
+                .subscribeCard {
+                    @include pop-out-card-light;
+                    @extend .sidebarCard;
+
+                    .buttonContainer {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .otherSocialsCard {
+                    @include pop-out-card-light;
+                    @extend .sidebarCard;
+
+                    .buttonsContainer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        width: 100%;
+                        gap: 1.5rem;
+
+                        a {
+                            width: 100%;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

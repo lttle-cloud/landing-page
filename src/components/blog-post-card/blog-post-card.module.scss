@@ -1,0 +1,78 @@
+@use "@/styles/variables.scss" as *;
+
+.blogPostCard {
+    @include pop-out-card-light;
+
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-height: 400px;
+    transition: all 0.1s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: $shadow-gray1-hover;
+    }
+
+    &:active {
+        transform: translate(5px, 5px);
+        box-shadow: $shadow-gray1-active;
+    }
+}
+
+.blogPostCardImage {
+    display: flex;
+    flex-basis: 50%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    img {
+        border-radius: 1.5rem;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.blogPostCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-basis: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: $black-2;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $black-1;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.blogPostCardTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.blogPostCardTag {
+    background-color: #f0f0f0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}

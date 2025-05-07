@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Onest, Anonymous_Pro } from "next/font/google";
-import "./globals.scss";
+import "../styles/globals.scss";
+import "../styles/hljs.css";
 import "@mantine/core/styles.css";
 import {
     ColorSchemeScript,

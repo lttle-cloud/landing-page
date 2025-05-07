@@ -1,4 +1,4 @@
-@use "@/app/variables.scss" as *;
+@use "@/styles/variables.scss" as *;
 
 .root {
     @include section;
@@ -66,11 +66,10 @@
 
             &.red {
                 background-color: $red-2;
-            }
-
-            &.red p,
-            &.red h3 {
-                color: $true-white;
+                h3,
+                p {
+                    color: $true-white;
+                }
             }
 
             &.cream {
@@ -83,11 +82,10 @@
 
             &.blue {
                 background-color: $blue-1;
-            }
-
-            &.blue p,
-            &.blue h3 {
-                color: $true-white;
+                h3,
+                p {
+                    color: $true-white;
+                }
             }
 
             &.special {

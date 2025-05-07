@@ -1,4 +1,79 @@
-@use "@/app/variables.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+// Define button variant maps
+$button-variants: (
+    primary: (
+        background: $pink-2,
+        color: $true-white,
+        shadow: $shadow-pink,
+        hover-shadow: $shadow-pink-hover,
+        active-shadow: $shadow-pink-active,
+        active-background: $red-2,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+    secondary: (
+        background: $pink-2,
+        color: $true-white,
+        shadow: $shadow-black,
+        hover-shadow: $shadow-black-hover,
+        active-shadow: $shadow-black-active,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+    teal: (
+        background: $teal-1,
+        color: $true-white,
+        shadow: $shadow-teal,
+        hover-shadow: $shadow-teal-hover,
+        active-shadow: $shadow-blue-active,
+        active-background: $teal-2,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+    red: (
+        background: $red-2,
+        color: $true-white,
+        shadow: $shadow-red,
+        hover-shadow: $shadow-red-hover,
+        active-shadow: $shadow-red-active,
+        active-background: $red-3,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+    blue: (
+        background: $blue-1,
+        color: $true-white,
+        shadow: $shadow-blue,
+        hover-shadow: $shadow-blue-hover,
+        active-shadow: $shadow-blue-active,
+        active-background: $blue-2,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+    purple: (
+        background: $purple-2,
+        color: $true-white,
+        shadow: $shadow-purple,
+        hover-shadow: $shadow-purple-hover,
+        active-shadow: $shadow-purple-active,
+        active-background: $purple-3,
+        transform: (
+            3px,
+            5px,
+        ),
+    ),
+);
 
 .root {
     display: flex;
@@ -13,71 +88,35 @@
     cursor: pointer;
     transition: all 0.1s ease-in-out;
 
-    &.primary {
-        background-color: $pink-2;
-        color: $true-white;
-
-        box-shadow: $shadow-pink;
-
-        &:hover {
-            box-shadow: $shadow-pink-hover;
-            transform: translate(3px, 3px);
-        }
-
-        &:active {
-            box-shadow: $shadow-pink-active;
-            transform: translate(5px, 5px);
-            background-color: $red-2;
-        }
+    &.full {
+        width: 100%;
     }
 
-    &.secondary {
-        @extend .primary;
+    // Generate styles for each variant
+    @each $variant, $styles in $button-variants {
+        &.#{$variant} {
+            background-color: map-get($styles, background);
+            color: map-get($styles, color);
+            box-shadow: map-get($styles, shadow);
 
-        box-shadow: $shadow-black;
+            &:hover {
+                box-shadow: map-get($styles, hover-shadow);
+                transform: translate(
+                    nth(map-get($styles, transform), 1),
+                    nth(map-get($styles, transform), 1)
+                );
+            }
 
-        &:hover {
-            box-shadow: $shadow-black-hover;
-        }
-
-        &:active {
-            box-shadow: $shadow-black-active;
-        }
-    }
-
-    &.teal {
-        @extend .primary;
-
-        background-color: $teal-1;
-        color: $true-white;
-
-        box-shadow: $shadow-teal;
-
-        &:hover {
-            box-shadow: $shadow-teal-hover;
-        }
-
-        &:active {
-            box-shadow: $shadow-blue-active;
-            background-color: $teal-2;
-        }
-    }
-
-    &.red {
-        @extend .primary;
-
-        background-color: $red-2;
-        color: $true-white;
-
-        box-shadow: $shadow-red;
-
-        &:hover {
-            box-shadow: $shadow-red-hover;
-        }
-
-        &:active {
-            background-color: $red-3;
-            box-shadow: $shadow-red-active;
+            &:active {
+                box-shadow: map-get($styles, active-shadow);
+                transform: translate(
+                    nth(map-get($styles, transform), 2),
+                    nth(map-get($styles, transform), 2)
+                );
+                @if map-has-key($styles, active-background) {
+                    background-color: map-get($styles, active-background);
+                }
+            }
         }
     }
 

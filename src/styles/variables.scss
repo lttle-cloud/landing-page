@@ -96,11 +96,21 @@ $shadow-purple: 5px 5px 0px 0px $purple-3;
 $shadow-purple-hover: 3px 3px 0px 0px $purple-3;
 $shadow-purple-active: 1px 1px 0px 0px $purple-3;
 
+$shadow-gray1: 5px 5px 0px 0px $gray-1;
+$shadow-gray1-hover: 3px 3px 0px 0px $gray-1;
+$shadow-gray1-active: 1px 1px 0px 0px $gray-1;
+
 @mixin pop-out-card {
     background-color: $true-white;
     border-radius: 1rem;
     box-shadow: $shadow-black;
     border: 5px solid $black-3;
+}
+
+@mixin pop-out-card-light {
+    background-color: $true-white;
+    border-radius: 1rem;
+    box-shadow: $shadow-gray1;
 }
 
 @mixin code-block {
