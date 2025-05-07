@@ -10,7 +10,13 @@ import Image from "next/image";
 import BlogPostFeaturedLink from "@/components/blog-post-featured-link/blog-post-featured-link";
 import Button from "@/components/button/button";
 import Link from "next/link";
-import { DISCORD_URL, IGNITION_URL, LINKEDIN_URL } from "../constants";
+import {
+    DISCORD_URL,
+    IGNITION_URL,
+    LINKEDIN_URL,
+    SUBSCRIBE_URL,
+} from "../constants";
+
 export default async function Blog() {
     // Fetch posts on the server
     const allPosts = getAllPosts([
@@ -92,12 +98,17 @@ export default async function Blog() {
                                     post
                                 </p>
                                 <div className={blogClasses.buttonContainer}>
-                                    <Button>subscribe</Button>
+                                    <Link href={SUBSCRIBE_URL} target="_blank">
+                                        <Button tabIndex={-1}>subscribe</Button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className={blogClasses.otherSocialsCard}>
                                 <h2>check out our other channels</h2>
-                                <p>we're active on these platforms as well.</p>
+                                <p>
+                                    we&apos;re active on these platforms as
+                                    well.
+                                </p>
 
                                 <div className={blogClasses.buttonsContainer}>
                                     <Link href={IGNITION_URL} target="_blank">

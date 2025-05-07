@@ -165,8 +165,8 @@ export default function AboutUs() {
                                 <Link href={`mailto:${CONTACT_EMAIL}`}>
                                     <Button variant="teal">contact us</Button>
                                 </Link>
-                                <Link href={IGNITION_URL}>
-                                    <Button>github</Button>
+                                <Link href={IGNITION_URL} target="_blank">
+                                    <Button tabIndex={-1}>github</Button>
                                 </Link>
                                 <Link href="/careers">
                                     <Button variant="red">careers</Button>

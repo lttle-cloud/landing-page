@@ -6,6 +6,8 @@ import LttleCloudSpan from "../lttle-cloud-span/lttle-cloud-span";
 import Separator from "../separator/separator";
 import Tabs from "../tabs/tabs";
 import classes from "./section-get-started.module.scss";
+import { IGNITION_URL, SIGN_UP_URL } from "@/app/constants";
+import Link from "next/link";
 
 const tabs = ["terminal power", "vibe devops"];
 
@@ -41,12 +43,16 @@ const SectionGetStarted = () => {
                                 pay-for-what-you-use pricing, and a developer
                                 experience that works beautifully.
                             </p>
-                            <Button
-                                variant="secondary"
-                                className={classes.button}
-                            >
-                                sign up here
-                            </Button>
+                            <Link href={SIGN_UP_URL} target="_blank">
+                                <Button
+                                    variant="secondary"
+                                    className={classes.button}
+                                    tabIndex={-1}
+                                    width="full"
+                                >
+                                    sign up here
+                                </Button>
+                            </Link>
                         </div>
                         <div className={classes.card}>
                             <div className={classes.cardHeader}>
@@ -61,12 +67,16 @@ const SectionGetStarted = () => {
                                 source code, and everything you need to launch
                                 your own cloud.
                             </p>
-                            <Button
-                                variant="secondary"
-                                className={classes.button}
-                            >
-                                github
-                            </Button>
+                            <Link href={IGNITION_URL} target="_blank">
+                                <Button
+                                    variant="secondary"
+                                    className={classes.button}
+                                    tabIndex={-1}
+                                    width="full"
+                                >
+                                    github
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

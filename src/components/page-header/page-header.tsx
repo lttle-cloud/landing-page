@@ -7,7 +7,7 @@ import Button from "../button/button";
 import { Menu } from "@mantine/core";
 import { useState } from "react";
 import Link from "next/link";
-import { CONTACT_EMAIL, IGNITION_URL } from "@/app/constants";
+import { CONTACT_EMAIL, IGNITION_URL, SIGN_UP_URL } from "@/app/constants";
 
 const sizesWithShortLogo = ["mobile", "tablet"];
 
@@ -94,9 +94,11 @@ const PageHeader = () => {
                         ))}
                     </ul>
 
-                    <Button className={classes.ctaButton} onClick={() => {}}>
-                        sign up
-                    </Button>
+                    <Link href={SIGN_UP_URL} target="_blank">
+                        <Button className={classes.ctaButton} tabIndex={-1}>
+                            sign up
+                        </Button>
+                    </Link>
                 </>
             ) : (
                 <Menu

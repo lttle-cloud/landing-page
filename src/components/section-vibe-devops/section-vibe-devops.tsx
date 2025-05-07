@@ -1,6 +1,8 @@
 import { cls } from "@/lib/utils";
 import classes from "./section-vibe-devops.module.scss";
 import Button from "../button/button";
+import Link from "next/link";
+import { SIGN_UP_URL } from "@/app/constants";
 
 type Card = {
     title: string;
@@ -28,7 +30,7 @@ const cards: Card[] = [
         ),
         color: "red",
     },
-    
+
     {
         title: "what is vibe devops?",
         description: (
@@ -85,7 +87,9 @@ const cards: Card[] = [
                     surprises.
                 </p>
                 <div>
-                    <Button>sign up</Button>
+                    <Link href={SIGN_UP_URL} target="_blank">
+                        <Button tabIndex={-1}>sign up</Button>
+                    </Link>
                 </div>
             </>
         ),
