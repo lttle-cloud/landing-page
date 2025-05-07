@@ -33,7 +33,7 @@ const SectionHero = () => {
                         </h1>
 
                         <h1>
-                            no cold starts. no middle layers. no vendor traps.
+                            no rewrites. no cold starts. no paying for idle.
                         </h1>
                     </div>
 
