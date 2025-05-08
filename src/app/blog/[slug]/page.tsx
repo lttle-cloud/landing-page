@@ -11,10 +11,11 @@ import markdownStyles from "@/styles/markdown-styles.module.scss";
 import { cls } from "@/lib/utils";
 
 export default async function BlogPost({
-    params,
+    params: asyncParams,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) {
+    const params = await asyncParams;
     const post = getPostBySlug(params.slug, [
         "title",
         "date",
