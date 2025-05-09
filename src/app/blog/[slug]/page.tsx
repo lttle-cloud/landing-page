@@ -9,6 +9,42 @@ import { format } from "date-fns";
 import markdownToHtml from "@/lib/markdownToHtml";
 import markdownStyles from "@/styles/markdown-styles.module.scss";
 import { cls } from "@/lib/utils";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params: asyncParams,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const params = await asyncParams;
+    const post = getPostBySlug(params.slug, [
+        "title",
+        "date",
+        "slug",
+        "author",
+        "content",
+        "coverImage",
+        "ogImage",
+        "tags",
+    ]);
+
+    if (!post) {
+        return {
+            title: "Post Not Found",
+            description: "The requested blog post could not be found.",
+        };
+    }
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            images: [post.ogImage || post.coverImage],
+        },
+    };
+}
 
 export default async function BlogPost({
     params: asyncParams,

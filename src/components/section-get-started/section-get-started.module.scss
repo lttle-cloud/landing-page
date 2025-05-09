@@ -35,7 +35,9 @@
 
         .titleContainer {
             @include section-title-container;
-            width: 100%;
+            & {
+                width: 100%;
+            }
 
             h2 {
                 font-weight: 500;

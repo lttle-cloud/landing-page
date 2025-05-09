@@ -10,6 +10,13 @@ import Button from "@/components/button/button";
 import ShapesMarquee from "@/components/shapes-marquee/shapes-marquee";
 import Link from "next/link";
 import { CONTACT_EMAIL, IGNITION_URL } from "../constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About lttle.cloud",
+    description:
+        "Learn more about lttle.cloud and our mission to build a better cloud infrastructure.",
+};
 
 export default function AboutUs() {
     return (

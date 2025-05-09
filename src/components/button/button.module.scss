@@ -1,8 +1,10 @@
+@use "sass:map";
+@use "sass:list";
 @use "@/styles/variables.scss" as *;
 
 // Define button variant maps
 $button-variants: (
-    primary: (
+    "primary": (
         background: $pink-2,
         color: $true-white,
         shadow: $shadow-pink,
@@ -14,7 +16,7 @@ $button-variants: (
             5px,
         ),
     ),
-    secondary: (
+    "secondary": (
         background: $pink-2,
         color: $true-white,
         shadow: $shadow-black,
@@ -25,7 +27,7 @@ $button-variants: (
             5px,
         ),
     ),
-    teal: (
+    "teal": (
         background: $teal-1,
         color: $true-white,
         shadow: $shadow-teal,
@@ -37,7 +39,7 @@ $button-variants: (
             5px,
         ),
     ),
-    red: (
+    "red": (
         background: $red-2,
         color: $true-white,
         shadow: $shadow-red,
@@ -49,7 +51,7 @@ $button-variants: (
             5px,
         ),
     ),
-    blue: (
+    "blue": (
         background: $blue-1,
         color: $true-white,
         shadow: $shadow-blue,
@@ -61,7 +63,7 @@ $button-variants: (
             5px,
         ),
     ),
-    purple: (
+    "purple": (
         background: $purple-2,
         color: $true-white,
         shadow: $shadow-purple,
@@ -95,26 +97,26 @@ $button-variants: (
     // Generate styles for each variant
     @each $variant, $styles in $button-variants {
         &.#{$variant} {
-            background-color: map-get($styles, background);
-            color: map-get($styles, color);
-            box-shadow: map-get($styles, shadow);
+            background-color: map.get($styles, background);
+            color: map.get($styles, color);
+            box-shadow: map.get($styles, shadow);
 
             &:hover {
-                box-shadow: map-get($styles, hover-shadow);
+                box-shadow: map.get($styles, hover-shadow);
                 transform: translate(
-                    nth(map-get($styles, transform), 1),
-                    nth(map-get($styles, transform), 1)
+                    list.nth(map.get($styles, transform), 1),
+                    list.nth(map.get($styles, transform), 1)
                 );
             }
 
             &:active {
-                box-shadow: map-get($styles, active-shadow);
+                box-shadow: map.get($styles, active-shadow);
                 transform: translate(
-                    nth(map-get($styles, transform), 2),
-                    nth(map-get($styles, transform), 2)
+                    list.nth(map.get($styles, transform), 2),
+                    list.nth(map.get($styles, transform), 2)
                 );
-                @if map-has-key($styles, active-background) {
-                    background-color: map-get($styles, active-background);
+                @if map.has-key($styles, active-background) {
+                    background-color: map.get($styles, active-background);
                 }
             }
         }
