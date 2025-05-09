@@ -67,7 +67,7 @@ const PageFooter = () => {
     }, []);
 
     return (
-        <footer className={classes.root}>
+        <footer className={classes.root} aria-label="Footer">
             <div className={classes.content}>
                 <div className={classes.links}>
                     <p className={classes.copyright}>
@@ -82,9 +82,9 @@ const PageFooter = () => {
                         ))}
                     </ul>
                 </div>
-                <div className={classes.socials}>
+                <ul className={classes.socials}>
                     {socials.map((social, index) => (
-                        <Fragment key={`${social.label}-${index}`}>
+                        <li key={`${social.label}-${index}`}>
                             <Link
                                 href={social.href}
                                 target="_blank"
@@ -99,9 +99,9 @@ const PageFooter = () => {
                                     height={24}
                                 />
                             </Link>
-                        </Fragment>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
             <div
                 className={classes.graphicContainer}

@@ -16,9 +16,14 @@ import {
     LINKEDIN_URL,
     SUBSCRIBE_URL,
 } from "../constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "lttle blog",
+    description: "lttle blog about tech and cloud infrastructure",
+};
 
 export default async function Blog() {
-    // Fetch posts on the server
     const allPosts = getAllPosts([
         "title",
         "date",

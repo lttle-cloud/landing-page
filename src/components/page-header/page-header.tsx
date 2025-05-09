@@ -60,7 +60,7 @@ const PageHeader = () => {
     const [opened, setOpened] = useState(false);
 
     return (
-        <header className={classes.root}>
+        <header className={classes.root} aria-label="Main navigation">
             <Link href="/">
                 {sizesWithShortLogo.includes(breakpoint) ? (
                     <Image
