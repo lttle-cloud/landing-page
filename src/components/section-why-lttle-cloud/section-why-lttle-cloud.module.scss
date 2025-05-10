@@ -211,10 +211,21 @@
     .cardsContainer {
         padding: 0 1.5rem 1rem;
         gap: 1rem;
+        flex-direction: column;
+        max-width: 100%;
 
         .card {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+
             .cardHeader {
                 padding: 1rem;
+
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
 
                 h4 {
                     font-size: 1rem;
@@ -236,6 +247,7 @@
     }
 
     .cardSectionWrapper {
+        gap: 1rem;
         .scrollbarContainer {
             width: calc(100% - 3rem);
         }
