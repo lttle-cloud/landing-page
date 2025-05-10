@@ -81,8 +81,7 @@ const SectionHero = () => {
                                             height={22}
                                         />
                                         <p>
-                                            and pricing that doesn&apos;t punish
-                                            you for success
+                                            and truly pay only for what you use
                                         </p>
                                     </li>
                                 </ul>
