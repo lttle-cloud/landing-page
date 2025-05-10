@@ -38,10 +38,11 @@ const navItems = [
         label: "contact",
         href: `mailto:${CONTACT_EMAIL}`,
     },
-    {
-        label: "use cases",
-        href: "/use-cases",
-    },
+    // TODO: add use cases
+    // {
+    //     label: "use cases",
+    //     href: "/use-cases",
+    // },
     {
         label: "resources",
         href: IGNITION_URL,

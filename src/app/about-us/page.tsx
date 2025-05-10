@@ -47,16 +47,16 @@ export default function AboutUs() {
                                 intuitive when you do. 
                                 <br />
                                 <br />
-                                we’re building an open-source cloud platform
+                                we&apos;re building an open-source cloud platform
                                 that enables business for product developers. no
                                 cold starts, no lock-in or gatekeepers, and no
                                 runaway bills.
                                 <br />
                                 <br />
-                                we’re not here to compete with the hyperscalers
-                                by playing their game.  we&apos;re here because
-                                the game has changed, and the cloud needs to
-                                adapt.
+                                we&apos;re not here to compete with the
+                                hyperscalers by playing their game.  we&apos;re
+                                here because the game has changed, and the cloud
+                                needs to adapt.
                             </p>
                         </div>
                         <Image

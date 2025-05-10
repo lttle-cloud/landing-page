@@ -131,10 +131,20 @@ export default function CareersClient() {
                                     color="teal"
                                 />
                                 <p>
-                                    cute subtitle about getting started here
-                                    maybe hmm, something about this long yeah
-                                    seems right
-                                    <br /> maybe a couple of paragraphs hmmm
+                                    <b>@ lttle.cloud</b>, we&apos;re reimagining
+                                    the future of product development with bold,
+                                    open-source cloud solutions.
+                                    <br />
+                                    <br />
+                                    we&apos;re a curious, collaborative crew who
+                                    love tinkering with big ideas and shaping
+                                    smarter, more open systems.
+                                    <br />
+                                    <br />
+                                    if building the future sounds more fun than
+                                    watching it happen, come join us.
+                                    <br />
+                                    we&apos;re hiring.
                                 </p>
                             </div>
                             <div>
