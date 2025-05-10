@@ -2,6 +2,7 @@ import Image from "next/image";
 import classes from "./blog-post-featured-link.module.scss";
 import { BlogPostType } from "@/lib/types";
 import Link from "next/link";
+import { format } from "date-fns";
 
 const BlogPostFeaturedLink = ({ post }: { post: BlogPostType }) => {
     return (
@@ -14,7 +15,10 @@ const BlogPostFeaturedLink = ({ post }: { post: BlogPostType }) => {
                     height={60}
                 />
             </div>
-            <h3>{post.title}</h3>
+            <div className={classes.blogPostCardContent}>
+                <h3>{post.title}</h3>
+                <p>{format(new Date(post.date), "MMMM d, yyyy")}</p>
+            </div>
         </Link>
     );
 };

@@ -6,16 +6,10 @@ import blogClasses from "./blog.module.scss";
 
 import { getAllPosts } from "@/lib/api";
 import BlogPostCard from "@/components/blog-post-card/blog-post-card";
-import Image from "next/image";
 import BlogPostFeaturedLink from "@/components/blog-post-featured-link/blog-post-featured-link";
 import Button from "@/components/button/button";
 import Link from "next/link";
-import {
-    DISCORD_URL,
-    IGNITION_URL,
-    LINKEDIN_URL,
-    SUBSCRIBE_URL,
-} from "../constants";
+import { DISCORD_URL, IGNITION_URL, LINKEDIN_URL } from "../constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -60,7 +54,7 @@ export default async function Blog() {
                             ))}
                         </div>
                         <aside className={blogClasses.sidebar}>
-                            <div className={blogClasses.authorCard}>
+                            {/* <div className={blogClasses.authorCard}>
                                 <div className={blogClasses.authorCardImage}>
                                     <Image
                                         src={"/assets/blog/authors/laur.png"}
@@ -76,7 +70,7 @@ export default async function Blog() {
                                     food does he like? what are the names of his
                                     pets, etc.
                                 </p>
-                            </div>
+                            </div> */}
                             {featuredPosts.length > 0 && (
                                 <div className={blogClasses.featuredPostsCard}>
                                     <h2>featured articles</h2>
@@ -94,7 +88,7 @@ export default async function Blog() {
                                     </div>
                                 </div>
                             )}
-                            <div className={blogClasses.subscribeCard}>
+                            {/* <div className={blogClasses.subscribeCard}>
                                 <h2>subscribe to our newsletter</h2>
                                 <p>
                                     interested in finding out more about tech
@@ -107,7 +101,7 @@ export default async function Blog() {
                                         <Button tabIndex={-1}>subscribe</Button>
                                     </Link>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className={blogClasses.otherSocialsCard}>
                                 <h2>check out our other channels</h2>
                                 <p>
