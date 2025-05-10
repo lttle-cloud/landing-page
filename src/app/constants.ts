@@ -7,3 +7,5 @@ export const X_URL = "https://x.com/lttlecloud_";
 
 export const SIGN_UP_URL = "https://forms.gle/oMEvJVV39YTxx2KK6";
 export const SUBSCRIBE_URL = "";
+
+export const MANIFESTO_URL = "/assets/hello-steve.pdf";
