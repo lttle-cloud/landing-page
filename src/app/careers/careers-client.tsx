@@ -166,9 +166,9 @@ export default function CareersClient() {
                     <div className={careersClasses.listTitle}>
                         <h2>open positions</h2>
                         <p>
-                            cute subtitle about getting started here maybe hmm,
-                            something about this long yeah seems right
-                            <br /> maybe a couple of paragraphs hmmm
+                            we&apos;re always looking for talented people to join
+                            our team. if you&apos;re interested in working with
+                            us, please apply to one of our open positions.
                         </p>
                     </div>
                     <div className={careersClasses.list}>
