@@ -44,17 +44,18 @@ const navItems = [
     //     href: "/use-cases",
     // },
     {
-        label: "resources",
-        href: IGNITION_URL,
-        external: true,
-    },
-    {
         label: "about us",
         href: "/about-us",
     },
+    // TODO: add blog posts
+    // {
+    //     label: "blog",
+    //     href: "/blog",
+    // },
     {
-        label: "blog",
-        href: "/blog",
+        label: "resources",
+        href: IGNITION_URL,
+        external: true,
     },
     {
         label: "careers",
