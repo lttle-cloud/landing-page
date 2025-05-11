@@ -63,8 +63,7 @@ export default function Pricing() {
                     <div className={pricingClasses.titleContainer}>
                         <h2>compare our offers</h2>
                         <p>
-                            little subtitle maybe to make the thing look
-                            prettier
+                            choose the plan that best fits your needs
                         </p>
                     </div>
                     <div className={pricingClasses.tableContainer}>
@@ -80,7 +79,7 @@ export default function Pricing() {
                                         }
                                     >
                                         <h3>
-                                            Compare our monthly plans in detail
+                                            compare our plans
                                         </h3>
                                         <div>tiny</div>
                                         <div>lttle</div>
