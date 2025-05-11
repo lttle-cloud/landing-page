@@ -67,7 +67,7 @@ export const cards: PricingCard[] = [
         description: "for extra-large needs",
         price: tiers.tier3.value,
         buttonText: "contact us",
-        buttonLink: `mailto:${CONTACT_EMAIL}`,
+        buttonLink: `mailto:${CONTACT_EMAIL}?subject=${tiers.tier3.name} plan inquiry`,
         buttonVariant: "red",
         features: [
             "unlimited compute seconds",
