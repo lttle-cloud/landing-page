@@ -1,0 +1,400 @@
+@use "@/styles/variables.scss" as *;
+
+.main {
+    background-color: $light-gray-1;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.cardsSection {
+    @include pop-out-card-light;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+
+    width: 100%;
+    max-width: $width-content;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .cardsContainer {
+        display: flex;
+        gap: 2rem;
+
+        .card {
+            @include pop-out-card;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex-basis: 33%;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: $blue-2;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+                color: $black-1;
+            }
+
+            .descriptionContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .price {
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: $blue-2;
+                }
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                font-weight: 800;
+                color: $blue-2;
+            }
+
+            .featuresContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    li {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $black-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tableSection {
+    @include pop-out-card-light;
+    padding: 2rem;
+    width: 100%;
+    max-width: $width-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .titleContainer {
+        @include section-title-container;
+
+        h2 {
+            font-weight: 800;
+        }
+
+        p {
+            color: $gray-3;
+        }
+    }
+
+    .tableContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tableWrapperHeader {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $black-1;
+            flex-basis: 25%;
+            padding: 0.5rem 0;
+        }
+
+        div {
+            flex-basis: 25%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0.5rem 0;
+
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: $blue-2;
+        }
+    }
+
+    .categoryTableWrapper {
+        overflow: hidden;
+    }
+
+    .pricingTable {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: $true-white;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .tableBody {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tableRow {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .tableData {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 500;
+            // border-bottom: 1px solid $light-gray-3;
+            width: 25%;
+            background: $light-gray-2;
+
+            .tierName {
+                display: none;
+            }
+        }
+
+        .tableData {
+            //third column
+            &:nth-child(3) {
+                background: $teal-0;
+                color: $black-3;
+            }
+        }
+
+        th {
+            font-weight: 800;
+            color: $blue-2;
+            background: $true-white;
+        }
+
+        .categoryHeader {
+            background: $light-gray-3;
+            color: $black-2;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: left;
+            // border-bottom: 2px solid $light-gray-3;
+            padding: 0.75rem 1rem;
+        }
+
+        .tableRow:last-child .tableData {
+            border-bottom: none;
+        }
+
+        .tableData {
+            color: $black-1;
+            vertical-align: top;
+        }
+
+        .featureName {
+            font-weight: 700;
+            color: $black-2;
+            background: $light-gray-1;
+            min-width: 200px;
+        }
+    }
+}
+
+.faqSection {
+    @include pop-out-card-light;
+    padding: 2rem;
+    width: 100%;
+    max-width: $width-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .faqHeader {
+        @include section-title-container;
+        h2 {
+            font-weight: 800;
+        }
+    }
+
+    .faqContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .faqItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        max-width: $width-content-small;
+
+        button {
+            width: 100%;
+            background: none;
+            border: none;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: 2rem;
+
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $black-2;
+
+            cursor: pointer;
+
+            img {
+                &.arrowDown {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .faqAnswer {
+            color: $black-1;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .main {
+        padding: 2rem 1rem;
+    }
+
+    .cardsSection {
+        padding: 1rem;
+        gap: 2rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .cardsContainer {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .cardsSection {
+        .cardsContainer {
+            .card {
+                padding: 1rem;
+                gap: 1.5rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                .descriptionContainer {
+                    .price {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 1rem;
+                }
+
+                .featuresContainer {
+                    ul {
+                        li {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tableSection {
+        padding: 1rem;
+        gap: 1rem;
+
+        .tableWrapperHeader {
+            h3 {
+                font-size: 1.25rem;
+                flex-basis: 100%;
+            }
+
+            div {
+                display: none;
+            }
+        }
+
+        .pricingTable {
+            .tableBody {
+                gap: 1rem;
+            }
+
+            .tableRow {
+                flex-direction: column;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                &:first-child {
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+
+            .tableData {
+                padding: 0.5rem 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+
+                .tierName {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .faqSection {
+        .faqContainer {
+            .faqItem {
+                max-width: 100%;
+
+                button {
+                    font-size: 1rem;
+                }
+
+                .faqAnswer {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}

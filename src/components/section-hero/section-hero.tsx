@@ -5,6 +5,7 @@ import classes from "./section-hero.module.scss";
 import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import Image from "next/image";
+import { useBreakpoint } from "@/lib/hooks";
 
 const words = ["web app", "ai agent", "api", "database"];
 const TYPING_SPEED = 150;
@@ -12,6 +13,8 @@ const DELETING_SPEED = 100;
 const TYPING_PAUSE_TIME = 2000;
 
 const SectionHero = () => {
+    const breakpoint = useBreakpoint();
+
     return (
         <section className={classes.root}>
             <div className={classes.content}>
@@ -36,18 +39,27 @@ const SectionHero = () => {
 
                     <div className={classes.block2}>
                         <div className={classes.block2Text}>
-                            <h2>
-                                deploy your{" "}
-                                <span className={classes.wordScrollEmphasis}>
-                                    <TypewriterAnimation
-                                        words={words}
-                                        typingSpeed={TYPING_SPEED}
-                                        deletingSpeed={DELETING_SPEED}
-                                        pauseTime={TYPING_PAUSE_TIME}
-                                    />
-                                </span>{" "}
-                                as serverless in seconds
-                            </h2>
+                            <div className={classes.block2Header}>
+                                <h2>
+                                    deploy your{" "}
+                                    <span
+                                        className={classes.wordScrollEmphasis}
+                                    >
+                                        <TypewriterAnimation
+                                            words={words}
+                                            typingSpeed={TYPING_SPEED}
+                                            deletingSpeed={DELETING_SPEED}
+                                            pauseTime={TYPING_PAUSE_TIME}
+                                        />
+                                    </span>{" "}
+                                    {!["mobile", "tablet"].includes(
+                                        breakpoint
+                                    ) && "as serverless in seconds"}
+                                </h2>
+                                {["mobile", "tablet"].includes(breakpoint) && (
+                                    <h2>as serverless in seconds</h2>
+                                )}
+                            </div>
 
                             <div className={classes.features}>
                                 {/* <h2>run any app as serverless</h2> */}

@@ -2,10 +2,17 @@ import { forwardRef } from "react";
 import classes from "./button.module.scss";
 import { cls } from "@/lib/utils";
 
+export type ButtonVariant =
+    | "primary"
+    | "secondary"
+    | "teal"
+    | "red"
+    | "purple"
+    | "blue";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     children: React.ReactNode;
-    variant?: "primary" | "secondary" | "teal" | "red" | "purple" | "blue";
+    variant?: ButtonVariant;
     width?: "full" | "fit";
 }
 

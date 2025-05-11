@@ -67,6 +67,12 @@
             align-items: flex-start;
             gap: 2.5rem;
 
+            .block2Header {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .block2Text {
                 display: flex;
                 flex-direction: column;
