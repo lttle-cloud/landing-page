@@ -22,32 +22,27 @@ export default function Pricing() {
 
             <main className={cls(rootClasses.main, pricingClasses.main)}>
                 <section className={pricingClasses.cardsSection}>
-                    <h1>
-                        Start for free. Collaborate.
-                        <br />
-                        Deploy any git repo.
-                        <br />
-                        <b>No hidden fees.</b>
-                    </h1>
-
                     <div className={pricingClasses.cardsContainer}>
                         {cards.map((card) => (
                             <div
                                 className={pricingClasses.card}
                                 key={card.title}
                             >
-                                <h2>{card.title}</h2>
                                 <div
                                     className={
                                         pricingClasses.descriptionContainer
                                     }
                                 >
+                                    <h2>{card.title}</h2>
                                     <p>{card.description}</p>
                                     <p className={pricingClasses.price}>
                                         {card.price}
                                     </p>
                                 </div>
-                                <Button variant={card.buttonVariant}>
+                                <Button
+                                    variant={card.buttonVariant}
+                                    href={card.buttonLink}
+                                >
                                     {card.buttonText}
                                 </Button>
                                 <div

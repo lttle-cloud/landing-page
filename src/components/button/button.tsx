@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef } from "react";
 import classes from "./button.module.scss";
 import { cls } from "@/lib/utils";
@@ -14,6 +16,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     variant?: ButtonVariant;
     width?: "full" | "fit";
+    href?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -21,6 +24,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         { className, children, variant = "primary", width = "fit", ...props },
         ref
     ) => {
+        const onClick = props.href
+            ? () => {
+                  window.open(props.href, "_blank");
+              }
+            : props.onClick;
+
         return (
             <button
                 ref={ref}
@@ -28,9 +37,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                     classes.root,
                     classes[variant],
                     width === "full" ? classes.full : "",
-                    className ?? ""
+                    className ?? "",
                 )}
                 {...props}
+                onClick={onClick} 
             >
                 {children}
             </button>

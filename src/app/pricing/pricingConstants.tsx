@@ -1,16 +1,17 @@
 import { ButtonVariant } from "@/components/button/button";
+import { CONTACT_EMAIL, SIGN_UP_URL } from "../constants";
 
 export const tiers = {
     tier1: {
-        name: "Hobby",
-        value: "Free",
+        name: "tiny",
+        value: "free",
     },
     tier2: {
-        name: "Pro",
+        name: "lttle",
         value: "$15/month",
     },
     tier3: {
-        name: "Enterprise",
+        name: "custom",
         value: "custom pricing",
     },
 };
@@ -20,6 +21,7 @@ type PricingCard = {
     description: string;
     price: string;
     buttonText: string;
+    buttonLink: string;
     buttonVariant: ButtonVariant;
     features: string[];
 };
@@ -27,48 +29,54 @@ type PricingCard = {
 export const cards: PricingCard[] = [
     {
         title: tiers.tier1.name,
-        description: "Perfect for prototyping and showcasing side projects",
+        description: "perfect for your personal projects",
         price: tiers.tier1.value,
-        buttonText: "get started",
+        buttonText: "sign up",
+        buttonLink: SIGN_UP_URL,
         buttonVariant: "primary",
         features: [
-            "2 seats across all projects",
-            "1M function invocations",
-            "15 min function timeout",
-            "3 PostgreSQL/MongoDB Databases",
-            "Automatic CI/CD",
-            "Community support",
+            "500k compute seconds",
+            "1GB persistent volumes",
+            "100GB egress traffic",
+            "10GB ingress traffic",
+            "no invocation count limit",
+            "no invocation timeout limit",
+            "community support",
         ],
     },
     {
         title: tiers.tier2.name,
         description:
-            "For professionals or teams up to 10 people who deploy to production",
+            "ready for production?",
         price: tiers.tier2.value,
-        buttonText: "start now",
+        buttonText: "sign up",
+        buttonLink: SIGN_UP_URL,
         buttonVariant: "teal",
         features: [
-            "2 seats across all projects",
-            "1M function invocations",
-            "15 min function timeout",
-            "3 PostgreSQL/MongoDB Databases",
-            "Automatic CI/CD",
-            "Community support",
+            "2M compute seconds included",
+            "10GB persistent volumes",
+            "1TB egress traffic",
+            "unlimited ingress traffic",
+            "no invocation count limit",
+            "no invocation timeout limit",
+            "email and chat support",
         ],
     },
     {
         title: tiers.tier3.name,
-        description: "For large organizations and businesses",
+        description: "for extra-large needs",
         price: tiers.tier3.value,
         buttonText: "contact us",
+        buttonLink: `mailto:${CONTACT_EMAIL}`,
         buttonVariant: "red",
         features: [
-            "2 seats across all projects",
-            "1M function invocations",
-            "15 min function timeout",
-            "3 PostgreSQL/MongoDB Databases",
-            "Automatic CI/CD",
-            "Community support",
+            "unlimited compute seconds",
+            "unlimited persistent volumes",
+            "unlimited egress traffic",
+            "unlimited ingress traffic",
+            "no invocation count limit",
+            "no invocation timeout limit",
+            "24/7 support",
         ],
     },
 ];
@@ -87,58 +95,96 @@ type PricingTableCategory = {
 
 export const tableCategory1Rows: PricingTableRow[] = [
     {
-        title: "projects",
-        tier1Value: "unlimited (non-commercial or academic)",
+        title: "active compute units",
+        tier1Value: "limited to 3",
         tier2Value: "unlimited",
         tier3Value: "unlimited",
     },
     {
-        title: "collaboration",
-        tier1Value: "2 seats across all projects (non-commercial or academic)",
-        tier2Value: "10 seats across all projects then $15 per additional seat",
-        tier3Value: "account management",
-    },
-    {
-        title: "concurrent builds",
-        tier1Value: "1",
-        tier2Value: "10",
-        tier3Value: "custom",
-    },
-    {
-        title: "build minutes",
-        tier1Value: "600",
-        tier2Value: "24,000",
+        title: "provisioned compute units",
+        tier1Value: "limited to 6",
+        tier2Value: "unlimited",
         tier3Value: "unlimited",
     },
     {
-        title: "bandwidth (fe + be)",
-        tier1Value: "100 gb",
-        tier2Value: "1 tb then starting at $10 per 100 gb",
-        tier3Value: "custom",
+        title: "always-on workloads",
+        tier1Value: "none",
+        tier2Value: "unlimited",
+        tier3Value: "unlimited",
     },
     {
-        title: "serverless function invocations",
-        tier1Value: "1,000,000",
-        tier2Value: "2,000,000 then starting at $0.40 per 1m",
+        title: "compute seconds",
+        tier1Value: "limited to 500k",
+        tier2Value: "2M included; 0.0000045$/second after",
         tier3Value: "custom",
     },
 ];
 
-export const tableCategory2Rows: PricingTableRow[] = tableCategory1Rows;
+export const tableCategory2Rows: PricingTableRow[] = [
+    {
+        title: "image storage",
+        tier1Value: "limited to 2GB",
+        tier2Value: "10GB included; 0.03$/GB after",
+        tier3Value: "custom",
+    },
+    {
+        title: "persistent volume size",
+        tier1Value: "limited to 1GB",
+        tier2Value: "10GB included; 0.03$/GB after",
+        tier3Value: "custom",
+    },
+    {
+        title: "egress traffic",
+        tier1Value: "limited to 100GB",
+        tier2Value: "1TB included; 0.03$/GB after",
+        tier3Value: "unlimited",
+    },
+    {
+        title: "ingress traffic",
+        tier1Value: "limited to 10GB",
+        tier2Value: "unlimited",
+        tier3Value: "unlimited",
+    },
+];
 
-export const tableCategory3Rows: PricingTableRow[] = tableCategory1Rows;
+export const tableCategory3Rows: PricingTableRow[] = [
+    {
+        title: "users",
+        tier1Value: "unlimited",
+        tier2Value: "unlimited",
+        tier3Value: "unlimited",
+    },
+    {
+        title: "API access",
+        tier1Value: "yes",
+        tier2Value: "yes",
+        tier3Value: "yes",
+    },
+    {
+        title: "self-hosting",
+        tier1Value: "yes",
+        tier2Value: "yes",
+        tier3Value: "yes",
+    },
+    {
+        title: "support",
+        tier1Value: "community",
+        tier2Value: "chat/email",
+        tier3Value: "24/7",
+    },
+];
 
 export const tableRows: PricingTableCategory[] = [
     {
-        title: "projects",
+        title: "compute",
         rows: tableCategory1Rows,
     },
     {
-        title: "collaboration",
+        title: "data",
         rows: tableCategory2Rows,
     },
     {
-        title: "build minutes",
+        title: "features",
         rows: tableCategory3Rows,
     },
 ];
@@ -150,15 +196,23 @@ type FaqItem = {
 
 export const faqItems: FaqItem[] = [
     {
-        question: "Placeholder question 1?",
-        answer: "Placeholder answer 1.",
+        question: "What is a compute unit?",
+        answer: "A compute unit is a slice of CPU and memory that is used by your application. It is the smallest unit of compute that you can provision. 1CU = 0.5vcpu and 1GB of memory.",
     },
     {
-        question: "Placeholder question 2? (with a longer question)",
-        answer: "Placeholder answer 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        question: "What is a compute second?",
+        answer: "A compute second is the amount of time your application is using a compute unit. 1 compute second = 1CU * 1 second.",
     },
     {
-        question: "Placeholder question 3? (with an even longer question)",
-        answer: "Placeholder answer 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        question: "What is the difference between an active and a provisioned compute unit?",
+        answer: "An active compute unit is a compute unit that is currently being used by your application. A provisioned compute unit is a compute unit that is allocated to your application but not currently being used. When your application is suspended, it does not consume any active compute units. However, it will still consume provisioned compute units.",
+    },
+    {
+        question: "0.0000045$/second? That must be a typo.",
+        answer: "No, that is not a typo. The price is $0.0000045 per second per compute unit. This is about 3x cheaper than AWS Lambda for the same amount of compute.",
+    },
+    {
+        question: "Do I need a credit card to get started?",
+        answer: "No, you can start using our platform without a credit card. However, you will need a credit card to use our platform if you exceed the free tier limits.",
     },
 ];
