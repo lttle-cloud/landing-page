@@ -196,23 +196,23 @@ type FaqItem = {
 
 export const faqItems: FaqItem[] = [
     {
-        question: "What is a compute unit?",
-        answer: "A compute unit is a slice of CPU and memory that is used by your application. It is the smallest unit of compute that you can provision. 1CU = 0.5vcpu and 1GB of memory.",
+        question: "what is a compute unit?",
+        answer: "a compute unit is a slice of cpu and memory that is used by your application. it is the smallest unit of compute that you can provision. 1cu = 0.5vcpu and 1gb of memory.",
     },
     {
-        question: "What is a compute second?",
-        answer: "A compute second is the amount of time your application is using a compute unit. 1 compute second = 1CU * 1 second.",
+        question: "what is a compute second?",
+        answer: "a compute second is the amount of time your application is using a compute unit. 1 compute second = 1cu * 1 second.",
     },
     {
-        question: "What is the difference between an active and a provisioned compute unit?",
-        answer: "An active compute unit is a compute unit that is currently being used by your application. A provisioned compute unit is a compute unit that is allocated to your application but not currently being used. When your application is suspended, it does not consume any active compute units. However, it will still consume provisioned compute units.",
+        question: "what is the difference between an active and a provisioned compute unit?",
+        answer: "an active compute unit is a compute unit that is currently being used by your application. a provisioned compute unit is a compute unit that is allocated to your application but not currently being used. when your application is suspended, it does not consume any active compute units. however, it will still consume provisioned compute units.",
     },
     {
-        question: "0.0000045$/second? That must be a typo.",
-        answer: "No, that is not a typo. The price is $0.0000045 per second per compute unit. This is about 3x cheaper than AWS Lambda for the same amount of compute.",
+        question: "0.0000045$/second? that must be a typo.",
+        answer: "no, that is not a typo. the price is $0.0000045 per second per compute unit. this is about 3x cheaper than aws lambda for the same amount of compute.",
     },
     {
-        question: "Do I need a credit card to get started?",
-        answer: "No, you can start using our platform without a credit card. However, you will need a credit card to use our platform if you exceed the free tier limits.",
+        question: "do I need a credit card to get started?",
+        answer: "no, you can start using our platform without a credit card. however, you will need a credit card to use our platform if you exceed the free tier limits.",
     },
 ];
