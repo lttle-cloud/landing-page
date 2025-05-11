@@ -82,9 +82,9 @@ export default function Pricing() {
                                         <h3>
                                             Compare our monthly plans in detail
                                         </h3>
-                                        <div>hobby</div>
-                                        <div>pro</div>
-                                        <div>enterprise</div>
+                                        <div>tiny</div>
+                                        <div>lttle</div>
+                                        <div>custom</div>
                                     </div>
                                 )}
                                 <div className={pricingClasses.pricingTable}>
