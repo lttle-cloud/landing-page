@@ -6,6 +6,7 @@ import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import Image from "next/image";
 import { useBreakpoint } from "@/lib/hooks";
+import { DISCORD_URL, IGNITION_URL, MANIFESTO_URL } from "@/app/constants";
 
 const words = ["web app", "ai agent", "api", "database"];
 const TYPING_SPEED = 150;
@@ -108,9 +109,9 @@ const SectionHero = () => {
                         </div>
 
                         <div className={classes.actions}>
-                            <a href="#get-started">get started</a>
-                            <a href="#how-it-works">how it works</a>
-                            <a href="#vibe-devops">vibe devops</a>
+                            <a href={MANIFESTO_URL}>read the manifesto</a>
+                            <a href={IGNITION_URL}>checkout our repo</a>
+                            <a href={DISCORD_URL}>community</a>
                         </div>
                     </div>
                 </div>

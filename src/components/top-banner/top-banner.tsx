@@ -1,3 +1,4 @@
+import { IGNITION_URL } from "@/app/constants";
 import classes from "./top-banner.module.scss";
 
 type TopBannerProps = {
@@ -6,10 +7,10 @@ type TopBannerProps = {
 
 const TopBanner = ({ time }: TopBannerProps) => {
     return (
-        <div className={classes.root}>
+        <a className={classes.root} href={IGNITION_URL}>
             this webpage was served to you by a virtual machine that was
             cold-booted in <span>{time.toFixed(3)}</span>ms.
-        </div>
+        </a>
     );
 };
 
