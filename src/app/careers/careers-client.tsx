@@ -21,7 +21,7 @@ interface Job {
 
 const jobs: Job[] = [
     {
-        title: "Cloud Operations Engineer / SRE",
+        title: "cloud operations engineer / SRE",
         department: "operations",
         position:
             "operate, maintain, and scale our bare metal fleet to support a decentralized cloud infrastructure.",
@@ -50,7 +50,7 @@ const jobs: Job[] = [
         ),
     },
     {
-        title: "Systems Engineer",
+        title: "systems engineer",
         department: "development",
         position:
             "build and evolve the core components of lttle.cloud, including ignition, proxy, cli, and the internal runtime.",
@@ -80,7 +80,7 @@ const jobs: Job[] = [
         ),
     },
     {
-        title: "Frontend Engineer",
+        title: "frontend engineer",
         department: "development",
         position:
             "build intuitive, responsive cloud management uis that make decentralized infrastructure feel effortless.",

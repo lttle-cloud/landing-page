@@ -11,7 +11,7 @@ export const tiers = {
         value: "$15/month",
     },
     tier3: {
-        name: "custom",
+        name: "large",
         value: "custom pricing",
     },
 };
@@ -64,7 +64,7 @@ export const cards: PricingCard[] = [
     },
     {
         title: tiers.tier3.name,
-        description: "for extra-large needs",
+        description: "for advanced needs",
         price: tiers.tier3.value,
         buttonText: "contact us",
         buttonLink: `mailto:${CONTACT_EMAIL}?subject=${tiers.tier3.name} plan inquiry`,

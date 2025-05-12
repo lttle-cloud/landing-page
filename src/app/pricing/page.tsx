@@ -83,7 +83,7 @@ export default function Pricing() {
                                         </h3>
                                         <div>tiny</div>
                                         <div>lttle</div>
-                                        <div>custom</div>
+                                        <div>large</div>
                                     </div>
                                 )}
                                 <div className={pricingClasses.pricingTable}>

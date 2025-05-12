@@ -20,15 +20,15 @@ type Social = {
 
 const links = [
     {
-        label: "Home",
+        label: "home",
         href: "/",
     },
     {
-        label: "About",
+        label: "about",
         href: "/about-us",
     },
     {
-        label: "Contact",
+        label: "contact",
         href: `mailto:${CONTACT_EMAIL}`,
     },
 ];
