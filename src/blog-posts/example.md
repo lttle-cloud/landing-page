@@ -4,7 +4,7 @@ excerpt: "In this post, we'll explore the fascinating world of placeholder text 
 coverImage: "/assets/blog/example/cover.png"
 date: "2024-03-15T00:00:00.000Z"
 author:
-    name: John Doe
+    name: Laurentiu Ciobanu
     picture: "/assets/blog/authors/laur.png"
 ogImage:
     url: "/assets/blog/example/cover.png"
