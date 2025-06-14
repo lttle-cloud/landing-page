@@ -6,6 +6,7 @@ type Info = {
 
 async function readInfo(): Promise<Info> {
     try {
+        // https://github.com/lttle-cloud/linux/pull/1/files#diff-8650770e4526c02b9abcdea3d59a73a1a369e377f9753f2f47949bc019b23f93
         const info = await readFile("/proc/lttle", "utf-8");
         return JSON.parse(info);
     } catch {
