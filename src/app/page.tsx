@@ -7,7 +7,7 @@ import ShapesMarquee from "@/components/shapes-marquee/shapes-marquee";
 import SectionWhyLttleCloud from "@/components/section-why-lttle-cloud/section-why-lttle-cloud";
 import SectionVibeDevops from "@/components/section-vibe-devops/section-vibe-devops";
 import TopBanner from "@/components/top-banner/top-banner";
-import { getBootTimeMs } from "./lib/lttle";
+import { getLastBootTimeMs } from "./lib/lttle";
 
 export const dynamic = "force-dynamic";
 
@@ -29,7 +29,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-    const bootTimeMs = await getBootTimeMs();
+    const bootTimeMs = await getLastBootTimeMs();
 
     return (
         <div className={rootClasses.root}>
