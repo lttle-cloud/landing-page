@@ -2,16 +2,18 @@
 
 // import Image from "next/image";
 import classes from "./section-hero.module.scss";
-import Lottie from "@lottielab/lottie-player/react";
 import TypewriterAnimation from "../typewriter-animation/typewriter-animation";
 import Image from "next/image";
 import { useBreakpoint } from "@/lib/hooks";
 import { DISCORD_URL, IGNITION_URL, MANIFESTO_URL } from "@/app/constants";
+import dynamic from "next/dynamic";
 
 const words = ["web app", "ai agent", "api", "database"];
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 100;
 const TYPING_PAUSE_TIME = 2000;
+
+const Lottie = dynamic(() => import("@lottielab/lottie-player/react"), { ssr: false });
 
 const SectionHero = () => {
     const breakpoint = useBreakpoint();

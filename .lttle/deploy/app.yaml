@@ -1,0 +1,31 @@
+app:
+  name: landing-page
+  namespace: landing
+  build:
+    docker:
+      context: ../../
+  resources:
+    cpu: 1
+    memory: 512
+  mode: 
+    flash:
+      strategy:
+        listen-on-port: 80
+      timeout: 3
+  expose:
+    public:
+      port: 80
+      external: 
+        protocol: https
+        host: ${{ var.rootDomain }}
+    public-www:
+      port: 80
+      external: 
+        protocol: https
+        host: www.${{ var.rootDomain }}
+    public-hello:
+      port: 80
+      external: 
+        protocol: https
+        host: hello.${{ var.rootDomain }}
+  

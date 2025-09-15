@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
-        "start": "next start",
+        "start": "node .next/standalone/server.js",
         "lint": "next lint"
     },
     "dependencies": {
@@ -26,6 +26,11 @@
         "remark-rehype": "^11.1.2",
         "sass": "^1.87.0",
         "unified": "^11.0.5"
+    },
+    "overrides": {
+        "@lottielab/lottie-player": {
+            "lottie-web": "https://codeload.github.com/lottielab/lottie-web/tar.gz/c671e8eaefb95099fdb126d2fc68a566327e4354"
+        }
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3",

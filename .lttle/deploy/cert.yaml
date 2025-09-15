@@ -1,0 +1,11 @@
+certificate:
+  name: landing-page
+  namespace: landing
+  domains:
+    - ${{ var.rootDomain }}
+    - www.${{ var.rootDomain }}
+    - hello.${{ var.rootDomain }}
+  issuer:
+    auto:
+      provider: letsencrypt
+      email: laurentiu@lttle.cloud
