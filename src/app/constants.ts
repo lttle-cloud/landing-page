@@ -1,5 +1,6 @@
 export const CONTACT_EMAIL = "contact@lttle.cloud";
 export const IGNITION_URL = "https://github.com/lttle-cloud/ignition";
+export const DOCS_URL = "https://docs.lttle.cloud";
 export const MS_BANNER_SOURCE_URL = "https://github.com/lttle-cloud/landing-page/blob/master/src/app/page.tsx#L32";
 
 export const DISCORD_URL = "https://discord.gg/xhNGGrZQja";

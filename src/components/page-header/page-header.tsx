@@ -9,6 +9,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
     CONTACT_EMAIL,
+    DOCS_URL,
     IGNITION_URL,
     MANIFESTO_URL,
     SIGN_UP_URL,
@@ -46,6 +47,11 @@ const navItems = [
     {
         label: "about us",
         href: "/about-us",
+    },
+    {
+        label: "docs",
+        href: DOCS_URL,
+        external: true,
     },
     // TODO: add blog posts
     // {
